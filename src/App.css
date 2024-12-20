@@ -1,0 +1,627 @@
+/* General resets */
+/* General Background */
+body {
+  background-color: #F5F0E1;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* Search Bar Centralization */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Spacing between inputs and button */
+  margin: 20px auto;
+  padding: 10px;
+  width: 50%; /* Adjusts the width of the search bar */
+  background-color: #ffffff; /* Optional: Adds a white background */
+  border: 1px solid #ccc; /* Optional: Adds a border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
+}
+
+.search-bar input {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+  margin: 20px;
+  border-radius: 30px;
+  background-color: #C1A57B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: left;
+}
+
+.logo-image {
+  width: 100px;
+  object-fit: contain; /* Ensure the image fits the specified dimensions */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: #F5F0E1;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.menu a {
+  color: #333;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.contact-btn {
+  background-color: #6C1E3C;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 4rem 2rem; /* Increased padding for more height */
+  background-color: #3B2F2F; /* Background color for contrast */
+  border-radius: 30px; /* Rounded corners like navbar */
+  width: 80%; /* Centralized and responsive */
+  margin: 0 auto; /* Centers the hero section */
+  min-height: 100px; /* Ensures a minimum height equal to or greater than the navbar */
+}
+
+.hero-content {
+  max-width: 50%; /* Ensure text content does not take up too much space */
+  color: #fff; /* Make text white */
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.hero-image img {
+  width: 400px; /* Adjust image size */
+  object-fit: cover;
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+.hero button {
+  padding: 1rem 2rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero button:hover {
+  background-color: #0056b3;
+}
+
+/* USP Section */
+.usp {
+  text-align: center;
+  padding: 2rem;
+  color: #F5F0E1;
+}
+
+.usp h2 {
+  color: #D4AF37;
+  margin-bottom: 1rem;
+}
+
+.usp-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.usp-stats div {
+  background-color: #6C1E3C;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+/* Agents Section */
+.agents {
+  padding: 2rem;
+  background-color: #F5F0E1;
+}
+
+.agents h2 {
+  text-align: center;
+  color: #6C1E3C;
+  margin-bottom: 1rem;
+}
+
+.agent-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.agent-card {
+  background-color: #D4AF37;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #fff;
+  margin: 0.5rem;
+  width: 200px;
+  text-align: center;
+}
+
+/* Projects Section */
+.projects {
+  padding: 2rem;
+}
+
+.projects h2 {
+  text-align: center;
+  color: #6C1E3C;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: #C1A57B;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem;
+  color: #fff;
+  width: 200px;
+  text-align: center;
+}
+
+/* Tools and Advice */
+.tools-advice {
+  padding: 2rem;
+  background-color: #F5F0E1;
+}
+
+.tools-advice h2 {
+  text-align: center;
+  color: #6C1E3C;
+}
+
+.tools {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tool-card {
+  background-color: #6C1E3C;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.newsletter {
+  background-color: #C1A57B; /* Set background color */
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.content {
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 2rem; /* Space between text and image */
+}
+
+.text {
+  flex: 1;
+  max-width: 500px; /* Limit width for better alignment */
+  padding-right: 2rem;
+}
+
+.text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.text form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.text input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px; /* Oval shaped corners */
+  width: 250px;
+  outline: none;
+}
+
+.text input:focus {
+  border: 2px solid #6C1E3C; /* Highlight color */
+}
+
+.text button {
+  background-color: #6C1E3C;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px; /* Oval shaped corners */
+  cursor: pointer;
+}
+
+.text button:hover {
+  background-color: #500f2c; /* Darken on hover */
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .image img {
+    max-width: 80%; /* Adjust image size on small screens */
+  }
+}
+
+/* Footer Section */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.footer-section h3 .time {
+  position: relative;
+  margin-right: 0.3rem;
+}
+
+.footer-section h3 .time::after {
+  content: '';
+  display: block;
+  width: 50%; /* Half-length line */
+  height: 2px;
+  background-color: #ADD8E6; /* White line below "Time" */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.footer-section h3 .slotter {
+  color: #ADD8E6; /* Light blue for "Slotter" */
+}
+
+/* Social Icons Section */
+.social-icons {
+  margin-top: 1rem;
+}
+.footer-words {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  background-color: #444;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.footer-words span {
+  flex: 1;
+  text-align: center;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ADD8E6; /* Light blue hover effect */
+}
+
+.footer-section h3.underlined::after {
+  content: '';
+  display: block;
+  width: 20%; /* width line for other sections */
+  height: 2px;
+  background-color: #ADD8E6; /* White underline */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+  color: #F5F0E1;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .project-card, .agent-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+.map-section {
+  padding: 2rem 1rem;
+  background-color: #F5F0E1; /* Matches the overall theme */
+  border-radius: 10px;
+  margin: 2rem auto;
+  width: 80%; /* Centers the map section */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for emphasis */
+}
+
+.map-section iframe {
+  border-radius: 10px;
+}
+
+.our-team {
+  text-align: left;  /* Align the "Our Team" title to the left */
+  margin-left: 20px;  /* Add left margin */
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  display: inline-block;  /* Ensures the line is only below the title */
+  border-bottom: 2px solid #6C1E3C; /* Line below the title */
+  padding-bottom: 10px;  /* Space between text and line */
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-between;  /* Distribute the boxes equally */
+  gap: 10px;
+  margin-top: 10px;
+  width: 90%;  /* Set the width of the container to 80% */
+  margin-left: 5%;  /* Center the container by adding 10% margin on the left */
+  margin-right: 5%;  /* Center the container by adding 10% margin on the right */
+}
+
+.team-member {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #F5F0E1;
+  color: #6C1E3C;
+  font-size: 16px;
+  border: 3px solid #6C1E3C;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;  /* Ensure the image fills the container */
+}
+
+.info-container {
+  width: 100%;
+  height: 30%;
+  background-color: #C1A57B;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #6C1E3C 
+}
+
+.designation {
+  font-size: 14px;
+  color: black;
+}
+
+.post-property-container {
+  width: 80%;  /* Set the width to 80% */
+  margin-left: 10%;  /* Center the container */
+  margin-right: 10%;  /* Center the container */
+  background-color: #C1A57B;  /* Background color for the container */
+  border-radius: 20px;  /* Circular corners */
+  display: flex;
+  justify-content: space-between;  /* Align content on both sides */
+  padding: 20px;  /* Add padding inside the container */
+  margin-bottom: 30px;  /* Space between this section and "Our Team" */
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.left-side p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #6C1E3C;
+}
+
+.right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.post-property-btn, .free-btn {
+  padding: 10px 15px;
+  font-size: 18px;
+  color: white;
+  background-color: #6C1E3C;
+  border: none;
+  border-radius: 25px;
+  margin-right: 25px;  /* Space between the two buttons */
+  text-align: center;
+  display: inline-block;  /* Allow buttons to stay inline */
+  width: auto;  /* Buttons will take as much width as needed */
+}
+
+.free-btn {
+  background-color: #F5F0E1;  /* Different background for the Free button */
+  color: black;
+}
+
+.post-property-btn:hover, .free-btn:hover {
+  background-color: #C1A57B;  /* Change color on hover */
+  cursor: pointer;
+}
+
+/* Add a cross at the top right of the Free button */
+.free-btn::after {
+  content: '×';  /* Unicode for cross symbol */
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  color: #6C1E3C;
+  font-weight: bold;
+}
