@@ -1,0 +1,70 @@
+/* Navbar Styling */
+.navbar {
+    margin: 20px;
+    border-radius: 50px; /* Adjusted for a more rounded navbar */
+    background-color: #C1A57B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logon {
+    display: flex;
+    align-items: left;
+  }
+  
+  .logon-image {
+    width: 100px;
+    object-fit: contain;
+
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjusted for better spacing */
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #7c4d4d;
+  }
+  
+.profnav {
+    display: flex;
+    margin-left: 20px;
+    transform: translateX(+125px);
+}
+
+.profnav-icon svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: block;
+  }
+  
+  /* Contact Button */
+  .contact-btn {
+    background-color: #7c4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-btn:hover {
+    background-color: #5c3434;
+  }
+  

@@ -1,40 +1,23 @@
 import React from "react";
 import "./App.css";
+import Realestate from "./realestate";
+import Infocard from "./infocard";
+import Navbar from "./navbar";
+import Aboutus from "./aboutus";
+import Agents from "./agents";
+import Services from "./services";
+import Listings from "./listings";
 
 function App() {
-  return (
-    <div className="container">
-      {/* Navbar */}
-      <header className="navbar">
-        <div className="logo">
-          <img
-            src="/Aarvasa_Logo-removebg 3(2).png"
-            alt="Aarvasa Logo 1"
-            className="logo-image"
-          />
-          <img
-            src="/Aarvasa_Logo-removebg 2.png"
-            alt="Aarvasa Logo 2"
-            className="logo-image"
-          />
-        </div>
-        <nav className="menu">
-          <a href="#">About us</a>
-          <a href="#">Agents</a>
-          <a href="#">Services</a>
-          <a href="#">Listings</a>
-          <a href="#"></a>
-        </nav>
-        <button className="contact-btn">Contact us</button>
-      </header>
-
+return (
+      <div className="container">
       {/* Hero Section */}
       <main className="hero">
         <div className="hero-content">
-          <h1>Welcome to Aarvasa</h1>
-          <p>Manage Your Property</p>
+          <h3>Welcome to Aarvasa</h3>
+          <h1>Manage Your Property</h1>
           <p>
-            Your dream home is just a search away. Supermarkets, buses,
+            Your will have everything nearby supermarkets, buses,
             stations, and more—all nearby!
           </p>
           <div className="search-bar">
@@ -50,46 +33,230 @@ function App() {
       </main>
 
       {/* USP Section */}
-      <section className="usp">
-        <h2>We’ve got properties for everyone</h2>
-        <div className="usp-stats">
-          <div>1022<br />Owner Properties</div>
-          <div>182<br />Projects</div>
-          <div>2364<br />Ready to move-in</div>
-          <div>3222<br />Budget Homes</div>
-        </div>
-      </section>
+<section className="usp">
+  <h2>We’ve got properties for everyone</h2>
+  <div className="usp-stats">
+    <div className="stat-item">
+      <img src="/image.png" alt="Owner Properties" />
+      <p>1022</p>
+      <p>Owner Properties</p>
+    </div>
+    <div className="stat-item">
+      <img src="/image(3).png" alt="Projects" />
+      <p>182</p>
+      <p>Projects</p>
+    </div>
+    <div className="stat-item">
+      <img src="/image(2).png" alt="Ready to Move-In" />
+      <p>2364</p>
+      <p>Ready to move-in</p>
+    </div>
+    <div className="stat-item">
+      <img src="/image(1).png" alt="Budget Homes" />
+      <p>3222</p>
+      <p>Budget Homes</p>
+    </div>
+  </div>
+</section>
+{/**/}
+<Infocard />
 
-      {/* Preferred Agents */}
-      <section className="agents">
-        <h2>Aarvasa Preferred Agents in New Delhi</h2>
-        <div className="agent-list">
-          <div className="agent-card">Vivek Kumar Mishra</div>
-          <div className="agent-card">Vivek Kumar Mishra</div>
-          <div className="agent-card">Vivek Kumar Mishra</div>
-          <div className="agent-card">Vivek Kumar Mishra</div>
+{/* Preferred Agents */}
+<section className="agents">
+  <h2>Aarvasa Preferred Agents in New Delhi</h2>
+  <div className="agent-list">
+    {/* Agent Card */}
+    <div className="agent-cardp">
+      {/* First Row */}
+      <div className="card-row first-row">
+        <img src="/image4.png" alt="Agent" className="agent-photo" />
+        <div className="agent-headerapp">
+          <h3>Av Preferred</h3>
+          <h4>Vivek Kumar Mishra</h4>
         </div>
-      </section>
+        <img src="/logo.png" alt="Badge" className="badge-logo" />
+      </div>
+      {/* Second Row */}
+      <div className="card-row second-row">
+        <div className="propertyapp-info">
+          <img src="/image5.png" alt="MV Properties" className="propertyapp-logo" />
+          <div className="propertyapp-details">
+            <p>MV Properties</p>
+            <p>Operating Since</p> 
+            <p>2006</p>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="buyers-info">
+          <p>Buyers Served</p>
+          <p>2500+</p>
+        </div>
+      </div>
+      {/* Third Row */}
+      <div className="card-row third-row">
+        <h3>45</h3>
+        <span>Properties for Sale</span>
+        <h3>3</h3>
+        <span>Properties for Rent</span>
+      </div>
+    </div>
+    <div className="agent-cardp">
+      {/* First Row */}
+      <div className="card-row first-row">
+        <img src="/image4.png" alt="Agent" className="agent-photo" />
+        <div className="agent-headerapp">
+          <h3>Av Preferred</h3>
+          <h4>Vivek Kumar Mishra</h4>
+        </div>
+        <img src="/logo.png" alt="Badge" className="badge-logo" />
+      </div>
+      {/* Second Row */}
+      <div className="card-row second-row">
+        <div className="propertyapp-info">
+          <img src="/image5.png" alt="MV Properties" className="propertyapp-logo" />
+          <div className="propertyapp-details">
+            <p>MV Properties</p>
+            <p>Operating Since 2006</p>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="buyers-info">
+          <p>Buyers Served</p>
+          <p>2500+</p>
+        </div>
+      </div>
+      {/* Third Row */}
+      <div className="card-row third-row">
+        <h3>45</h3>
+        <span>Properties for Sale</span>
+        <h3>3</h3>
+        <span>Properties for Rent</span>
+      </div>
+    </div>
+    <div className="agent-cardp">
+      {/* First Row */}
+      <div className="card-row first-row">
+        <img src="/image4.png" alt="Agent" className="agent-photo" />
+        <div className="agent-headerapp">
+          <h3>Av Preferred</h3>
+          <h4>Vivek Kumar Mishra</h4>
+        </div>
+        <img src="/logo.png" alt="Badge" className="badge-logo" />
+      </div>
+      {/* Second Row */}
+      <div className="card-row second-row">
+        <div className="propertyapp-info">
+          <img src="/image5.png" alt="MV Properties" className="propertyapp-logo" />
+          <div className="propertyapp-details">
+            <p>MV Properties</p>
+            <p>Operating Since 2006</p>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="buyers-info">
+          <p>Buyers Served</p>
+          <p>2500+</p>
+        </div>
+      </div>
+      {/* Third Row */}
+      <div className="card-row third-row">
+        <h3>45</h3>
+        <span>Properties for Sale</span>
+        <h3>3</h3>
+        <span>Properties for Rent</span>
+      </div>
+    </div>
+    <div className="agent-cardp">
+      {/* First Row */}
+      <div className="card-row first-row">
+        <img src="/image4.png" alt="Agent" className="agent-photo" />
+        <div className="agent-headerapp">
+          <h3>Av Preferred</h3>
+          <h4>Vivek Kumar Mishra</h4>
+        </div>
+        <img src="/logo.png" alt="Badge" className="badge-logo" />
+      </div>
+      {/* Second Row */}
+      <div className="card-row second-row">
+        <div className="propertyapp-info">
+          <img src="/image5.png" alt="MV Properties" className="propertyapp-logo" />
+          <div className="propertyapp-details">
+            <p>MV Properties</p>
+            <p>Operating Since 2006</p>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="buyers-info">
+          <p>Buyers Served</p>
+          <p>2500+</p>
+        </div>
+      </div>
+      {/* Third Row */}
+      <div className="card-row third-row">
+        <h3>45</h3>
+        <span>Properties for Sale</span>
+        <h3>3</h3>
+        <span>Properties for Rent</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-      {/* Recent Projects */}
+
+      {/* Projects */}
       <section className="projects">
+        <h3>Best Projects of the Years</h3>
         <h2>Our Recent Projects</h2>
         <div className="project-cards">
           <div className="project-card">
-            <h3>Sobha Heartland II Villas</h3>
-            <p>Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum.</p>
-            <span>4.83</span>
+            <div className="project-image">
+              <img src="/Rectangle 19.png" alt="Project Image" />
+            </div>
+            <div className="project-text">
+              <h3>Sobha Heartland II Villas</h3>
+              <p>Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum.</p>
+              <p><center>4.83</center></p>
+            </div>
           </div>
           <div className="project-card">
-            <h3>Sobha Heartland II Villas</h3>
-            <p>Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum.</p>
-            <span>4.83</span>
+            <div className="project-image">
+              <img src="/Rectangle 20.png" alt="Project Image" />
+            </div>
+            <div className="project-text">
+              <h3>Sobha Heartland II Villas</h3>
+              <p>Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum.</p>
+              <p><center>4.83</center></p>
+            </div>
           </div>
           <div className="project-card">
-            <h3>Sobha Heartland II Villas</h3>
-            <p>Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum.</p>
-            <span>4.83</span>
+            <div className="project-image">
+              <img src="/Rectangle 21.png" alt="Project Image" />
+            </div>
+            <div className="project-text">
+              <h3>Sobha Heartland II Villas</h3>
+              <p>Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum.</p>
+              <p><center>4.83</center></p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/*Bachelor's*/}
+      <section className="Bachelor">
+        <div className="absolute top-0 left-1/4 w-32 h-32 rounded-full bg-white opacity-10 blur-xl"></div>
+        <div className="absolute top-10 left-1/2 w-24 h-24 rounded-full bg-white opacity-10 blur-xl"></div>
+        <div className="absolute -top-10 right-1/4 w-40 h-40 rounded-full bg-white opacity-10 blur-xl"></div>
+
+        <div className="bac-box">
+          
+          <p>Solving the</p>
+          <div className="secnd-line">Unsolvable problem</div>
+          <p className="third-line">with <span className="highlight">Aarvasa</span></p>
+          <p className="bold">Now Property Available for <strong>BACHELOR'S</strong> 
+          <div className="itali">also...</div>
+          </p>
+
+          <a href="#" className="explore-link">Explore →</a>
         </div>
       </section>
 
@@ -104,13 +271,16 @@ function App() {
         </div>
       </section>
 
-      <div class="post-property-container">
+      {/* Real Estate Guide Section */}
+      <Realestate />
+
+      <div class="post-propertyapp-container">
     <div class="left-side">
         <p>Post your property for free</p>
         <p>List it on Aarvasa and get Genuine leads</p>
     </div>
     <div class="right-side">
-        <button class="post-property-btn">
+        <button class="post-propertyapp-btn">
             Post Property
             <button class="free-btn">Free</button>
         </button>
@@ -176,11 +346,19 @@ function App() {
       <section className="newsletter">
       <div class="content">
         <div class="text">
-          <h2>Subscribe to Our Newsletter</h2>
-          <p>Get the latest updates, news, and offers directly in your inbox. Don't miss out on exclusive deals!</p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <strong>Subscribe Our Newsletter</strong>
+          <p>Lorem ipsum dolor sit amet consectetur. Feugiat ut aliquet sit pellentesque sollicitudin. Egestas faucibus lacus diam in senectus consectetur. Mattis elit adipiscing quisque tellus scelerisque vehicula ante nunc.</p>
           <form>
             <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Subscribe</button>
+            <button type="submit">SUBSCRIBE</button>
           </form>
         </div>
         <div class="image">
@@ -238,9 +416,8 @@ function App() {
           <p>Email: timeslotter@outlook.com</p>
         </div>
       </footer>
-    </div>
-    
 
+      </div>
   );
 }
 
