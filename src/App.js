@@ -1,12 +1,9 @@
 import React from "react";
 import "./App.css";
 import Realestate from "./realestate";
+import ToolsAdvice from "./toolsadvice";
 import Infocard from "./infocard";
-import Navbar from "./navbar";
-import Aboutus from "./aboutus";
-import Agents from "./agents";
-import Services from "./services";
-import Listings from "./listings";
+import SearchBar from "./SearchBar";
 
 function App() {
 return (
@@ -20,12 +17,7 @@ return (
             Your will have everything nearby supermarkets, buses,
             stations, and more—all nearby!
           </p>
-          <div className="search-bar">
-            <input type="text" placeholder="New Delhi" />
-            <input type="text" placeholder="Flat +1" />
-            <input type="text" placeholder="Budget" />
-            <button>Search</button>
-          </div>
+            <SearchBar />
         </div>
         <div className="hero-image">
           <img src="/Final ii 1.png" alt="Hero Image" />
@@ -261,15 +253,7 @@ return (
       </section>
 
       {/* Tools and Advice */}
-      <section className="tools-advice">
-        <h2>Advice & Tools</h2>
-        <div className="tools">
-          <div className="tool-card">ROI</div>
-          <div className="tool-card">View Now</div>
-          <div className="tool-card">Watch Video</div>
-          <div className="tool-card">Read More</div>
-        </div>
-      </section>
+      <ToolsAdvice />
 
       {/* Real Estate Guide Section */}
       <Realestate />
@@ -292,7 +276,7 @@ return (
     <div class="team-members">
         <div class="team-member">
             <div class="image-container">
-                <img src="path_to_image.jpg" alt="Team Member Image" />
+                <img src="/uday.png" alt="Team Member Image" />
             </div>
             <div class="info-container">
                 <p class="name">Uday Prakash Sahu</p>
@@ -301,7 +285,7 @@ return (
         </div>
         <div class="team-member">
             <div class="image-container">
-                <img src="path_to_image.jpg" alt="Team Member Image" />
+                <img src="/ansh.png" alt="Team Member Image" />
             </div>
             <div class="info-container">
                 <p class="name">Ansh Dubey</p>
@@ -310,7 +294,7 @@ return (
         </div>
         <div class="team-member">
             <div class="image-container">
-                <img src="path_to_image.jpg" alt="Team Member Image" />
+                <img src="/lakshay.png" alt="Team Member Image" />
             </div>
             <div class="info-container">
                 <p class="name">Lakshya Phoolwani</p>
@@ -319,7 +303,7 @@ return (
         </div>
         <div class="team-member">
             <div class="image-container">
-                <img src="path_to_image.jpg" alt="Team Member Image" />
+                <img src="/archit.png" alt="Team Member Image" />
             </div>
             <div class="info-container">
                 <p class="name">Archit Agrawal</p>
@@ -346,14 +330,6 @@ return (
       <section className="newsletter">
       <div class="content">
         <div class="text">
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
           <strong>Subscribe Our Newsletter</strong>
           <p>Lorem ipsum dolor sit amet consectetur. Feugiat ut aliquet sit pellentesque sollicitudin. Egestas faucibus lacus diam in senectus consectetur. Mattis elit adipiscing quisque tellus scelerisque vehicula ante nunc.</p>
           <form>

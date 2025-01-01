@@ -52,6 +52,7 @@ body {
 .search-button:hover svg {
   transform: scale(1.2); /* Slight zoom effect on hover */
 }
+
 .agents-page {
   background-color: #F5F0E1;
   margin: 0;

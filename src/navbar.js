@@ -13,7 +13,7 @@ const Navbar = () => {
                         className="logon-image"
                     />
                     <img
-                        src="/Aarvasa_Logo-removebg 2.png"
+                        src="/Aarvasa_Logo-removebg 3(3).png"
                         alt="Aarvasa Logo 2"
                         className="logon-image"
                     />

@@ -17,6 +17,7 @@
   .logon-image {
     width: 100px;
     object-fit: contain;
+    transform: translateX(-10px);
 
   }
   
@@ -24,8 +25,9 @@
     display: flex;
     align-items: center;
     gap: 20px; /* Adjusted for better spacing */
+    transform: translateX(+45px);
   }
-  
+
   .menu a {
     text-decoration: none;
     color: black;
