@@ -1,56 +1,53 @@
 import React from 'react';
-import './infocard.css'; // Assuming the CSS is in App.css
+import './infocard.css';
 
 function App() {
-  const handleCardClick = (url) => {
-    window.open(url, '_blank'); // Opens the link in a new tab
-  };
-
   return (
     <div className="infocontainer">
-  {/* Left Half - Image Placeholder */}
-  <div className="info-left">
-    <img src="/whyaarvasa.png" alt="Why Aarvasa" />
-  </div>
+      {/* Left Half - Image Placeholder */}
+      <div className="info-left">
+        <img src="/whyaarvasa.png" alt="Why Aarvasa" />
+      </div>
 
-  {/* Right Half - 3 Columns */}
-<div className="info-right">
-  {/* Column 1 */}
-  <div className="column">
-    {/* Row 1 */}
-    <div className="row">
-      <div className="infocard">
-        <img src="/image 192.png" alt="Comprehensive Consultancy" />
-      </div>
-      <div className="infocard">
-        <img src="/image 194.png" alt="AR/VR Property" />
-        <h3>AR/VR Property</h3>
-      </div>
-    </div>
-    {/* Row 2 */}
-    <div className="infocard">
-      <img src="/image 195.png" alt="Blockchain-Backed Transaction" />
+      {/* Right Half */}
+      <div className="info-right">
+        {/* Column 1 */}
+        <div className="column1">
+          <div className="row">
+            <div className="box small">
+              <img src="/image192.png" alt="Comprehensive Consultancy" />
+              <h3>Comprehensive Consultancy</h3>
+            </div>
+            <div className="box small">
+              <img src="/image194.png" alt="AR/VR Property" />
+              <h3>AR/VR Property</h3>
+            </div>
+          </div>
+          <div className="box large">
+            <img src="/image197.png" alt="Horizontal Feature" />
+            <h3>Monetization of Existing Properties</h3>
+          </div>
+        </div>
+{/* Column 2 */}
+<div className="column2">
+  {/* Sub-column 1 */}
+  <div className="sub-column">
+    <div className="box">
+      <img src="/image195.png" alt="Blockchain-Backed Transaction" />
       <h3>Blockchain-Backed Transaction</h3>
     </div>
   </div>
 
-  {/* Column 2 */}
-  <div className="column">
-    <div className="infocard">
-      <img src="/image 196.png" alt="Monetization of Existing Properties" />
-    </div>
-  </div>
-
-  {/* Column 3 */}
-  <div className="column">
-    <div className="infocard">
-      <img src="/image 197.png" alt="Future Options" />
-      <h3>Future Options</h3>
+  {/* Sub-column 2 */}
+  <div className="sub-column">
+    <div className="box">
+      <img src="/image196.png" alt="Additional Feature" />
+      <h3>Additional Feature</h3>
     </div>
   </div>
 </div>
 </div>
-
+    </div>
   );
 }
 

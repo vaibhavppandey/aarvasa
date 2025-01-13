@@ -1,74 +1,147 @@
 .infocontainer {
   display: flex;
   padding: 20px;
-  background-color: #B5AC94; /* Adjust background color */
+  background-color: #ECE5CE; /* Light beige background */
   border-radius: 1.5rem;
-  height: 300px;
+  gap: 20px; /* Gap between left and right sections */
+  height: auto; /* Flexible height to fit content */
 }
 
 .info-left {
-  width: 50%; /* Left half for the image */
+  flex: 1; /* Allow dynamic resizing for responsiveness */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .info-left img {
-  width: 40%;
-  height: 70%;
-  object-fit: fill; /* Ensure proper fit */
-  border-radius: 16px; /* Add rounded corners to match the style */
+  width: 80%; /* Adjust image size for better fit */
+  height: auto;
+  object-fit: cover; /* Maintain image proportion */
+  border-radius: 16px; /* Add rounded corners */
 }
 
 .info-right {
-  width: 50%; /* Right half for cards */
+  flex: 2; /* Right side takes more space */
   display: flex;
-  gap: 10px; /* Spacing between columns */
+  flex-wrap: wrap;
+  gap: 20px; /* Spacing between columns */
 }
 
-.column {
+/* Column Styling */
+.column1 {
+  flex: 1; /* Equal space for both columns */
   display: flex;
   flex-direction: column;
-  flex: 1;
-  gap: 10px;
+  gap: 20px; /* Spacing between rows in each column */
 }
 
+/* Row Styling for Column 1 */
 .row {
   display: flex;
-  gap: 10px;
+  gap: 20px; /* Spacing between boxes */
 }
 
-.infocard {
-  flex: 1;
+/* Box (Card) Styling */
+.box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 16px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+  text-align: center;
 }
 
-.infocard:hover {
+.box:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.infocard img {
-  width: 120%;
-  height: 120%; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure proper fit */
-  border-radius: 8px;
+.box img {
+  width: 80px; /* Standardized icon size */
+  height: 80px;
+  object-fit: contain; /* Ensure icons fit properly */
+  margin-bottom: 10px;
 }
 
-.infocard h3 {
+.box h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Large Box Styling */
+.box.large {
+  flex: 1;
+  padding: 5px;
+  text-align: center;
+}
+
+.box.large img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* Icons fit properly */
+  margin-bottom: 10px;
+}
+
+.box.large h3 {
   font-size: 16px;
   font-weight: bold;
-  text-align:top;
   color: #333;
-  margin: 10px 0;
+  margin-top: 15px;
+}
+
+/* Column 2 Styling */
+.column2 {
+  display: flex;
+  gap: 20px; /* Space between the sub-columns */
+  flex: 1; /* Ensures it shares equal space with Column 1 */
+}
+/* Sub-column Styling */
+.sub-column {
+  flex: 1; /* Ensures equal width for sub-columns */
+  display: flex;
+  flex-direction: column; /* Stack boxes vertically */
+  gap: 20px; /* Space between boxes in the sub-column */
+}
+
+/* Box (Card) Styling */
+.box {
+  flex: 1; /* Stretches each box to fill the available height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* Icons fit properly */
+  margin-bottom: 10px;
+}
+
+.box h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
 }
