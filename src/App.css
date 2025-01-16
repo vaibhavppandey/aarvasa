@@ -684,7 +684,7 @@ body {
   border-radius: 10px;
 }
 
-/**/
+/*Our Team*/
 .our-team {
   text-align: left;  /* Align the "Our Team" title to the left */
   margin-left: 20px;  /* Add left margin */
@@ -743,17 +743,57 @@ body {
 }
 
 .image-container {
+  position: relative;
   width: 100%;
   height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .image-container img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
+
+.image-container:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.social-media-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .social-media-container {
+  opacity: 1;
+}
+
+.social-icon {
+  color: #D4AF37;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #0073b1; /* LinkedIn's blue color */
+}
+
 
 .info-container {
   width: 100%;
@@ -778,6 +818,7 @@ body {
   color: black;
 }
 
+/*Post*/
 .post-propertyapp-container {
   width: 80%;  /* Set the width to 80% */
   margin-left: 10%;  /* Center the container */
