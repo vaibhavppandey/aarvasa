@@ -24,32 +24,37 @@ return (
         </div>
       </main>
 
-      {/* USP Section */}
+{/* USP Section */}
 <section className="usp">
   <h2>We’ve got properties for everyone</h2>
   <div className="usp-stats">
     <div className="stat-item">
       <img src="/image.png" alt="Owner Properties" />
-      <p>1022</p>
-      <p>Owner Properties</p>
+      <h3>1022</h3>
+      <h3>Owner Properties</h3>
+      <h3 className="explore-link"><a href="/owner-properties">Explore →</a></h3>
     </div>
     <div className="stat-item">
       <img src="/image(3).png" alt="Projects" />
-      <p>182</p>
-      <p>Projects</p>
+      <h3>182</h3>
+      <h3>Projects</h3>
+      <h3 className="explore-link"><a href="/projects">Explore →</a></h3>
     </div>
     <div className="stat-item">
       <img src="/image(2).png" alt="Ready to Move-In" />
-      <p>2364</p>
-      <p>Ready to move-in</p>
+      <h3>2364</h3>
+      <h3>Ready to move-in</h3>
+      <h3 className="explore-link"><a href="/ready-to-move-in">Explore →</a></h3>
     </div>
     <div className="stat-item">
       <img src="/image(1).png" alt="Budget Homes" />
-      <p>3222</p>
-      <p>Budget Homes</p>
+      <h3>3222</h3>
+      <h3>Budget Homes</h3>
+      <h3 className="explore-link"><a href="/budget-homes">Explore →</a></h3>
     </div>
   </div>
 </section>
+
 {/**/}
 <Infocard />
 
