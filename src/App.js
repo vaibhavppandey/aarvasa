@@ -8,21 +8,91 @@ import SearchBar from "./SearchBar";
 function App() {
 return (
       <div className="container">
-      {/* Hero Section */}
+      {/*Hero*/}
       <main className="hero">
-        <div className="hero-content">
-          <h3>Welcome to Aarvasa</h3>
-          <h1>Manage Your Property</h1>
-          <p>
-            Your will have everything nearby supermarkets, buses,
-            stations, and more—all nearby!
-          </p>
-            <SearchBar />
-        </div>
-        <div className="hero-image">
-          <img src="/Final ii 1.png" alt="Hero Image" />
-        </div>
-      </main>
+  <div className="hero-content">
+    <h3>Welcome to Aarvasa</h3>
+    <h1>Manage Your Property</h1>
+    <p>
+      Your will have everything nearby supermarkets, buses, stations, and
+      more—all nearby!
+    </p>
+    <SearchBar />
+  </div>
+  <div className="hero-image">
+    <img src="/Final ii 1.png" alt="Hero Image" />
+  </div>
+
+  {/* SVG Clouds */}
+  <svg
+    className="cloud"
+    width="200"
+    height="300"
+    viewBox="0 0 64 32"
+    style={{ top: "20px", left: "10%" }}
+  >
+    <ellipse cx="16" cy="16" rx="16" ry="8" />
+    <ellipse cx="32" cy="16" rx="16" ry="8" />
+    <ellipse cx="24" cy="12" rx="20" ry="10" />
+  </svg>
+  <svg
+    className="cloud"
+    width="200"
+    height="100"
+    viewBox="0 0 64 32"
+    style={{ top: "50px", right: "5%" }}
+  >
+    <ellipse cx="16" cy="16" rx="16" ry="8" />
+    <ellipse cx="32" cy="16" rx="16" ry="8" />
+    <ellipse cx="24" cy="12" rx="20" ry="10" />
+  </svg>
+  <svg
+    className="cloud"
+    width="180"
+    height="90"
+    viewBox="0 0 64 32"
+    style={{ top: "10%", left: "40%" }}
+  >
+    <ellipse cx="16" cy="16" rx="16" ry="8" />
+    <ellipse cx="32" cy="16" rx="16" ry="8" />
+    <ellipse cx="24" cy="12" rx="20" ry="10" />
+  </svg>
+  <svg
+    className="cloud"
+    width="130"
+    height="70"
+    viewBox="0 0 64 32"
+    style={{ bottom: "20px", left: "15%" }}
+  >
+    <ellipse cx="16" cy="16" rx="16" ry="8" />
+    <ellipse cx="32" cy="16" rx="16" ry="8" />
+    <ellipse cx="24" cy="12" rx="20" ry="10" />
+  </svg>
+  
+  <svg
+    className="cloud"
+    width="400"
+    height="300"
+    viewBox="0 0 64 32"
+    style={{ top: "70px", right: "40%" }}
+  >
+    <ellipse cx="16" cy="16" rx="16" ry="8" />
+    <ellipse cx="32" cy="16" rx="16" ry="8" />
+    <ellipse cx="24" cy="12" rx="20" ry="10" />
+  </svg>
+  <svg
+    className="cloud"
+    width="160"
+    height="80"
+    viewBox="0 0 64 32"
+    style={{ top: "200px", left: "5%" }}
+  >
+    <ellipse cx="16" cy="16" rx="16" ry="8" />
+    <ellipse cx="32" cy="16" rx="16" ry="8" />
+    <ellipse cx="24" cy="12" rx="20" ry="10" />
+  </svg>
+</main>
+
 
 {/* USP Section */}
 <section className="usp">
@@ -265,7 +335,7 @@ return (
 
       <div class="post-propertyapp-container">
     <div class="left-side">
-        <p>Post your property for free</p>
+        <h3>Post your property for <div className="itali">Free...</div></h3>
         <p>List it on Aarvasa and get Genuine leads</p>
     </div>
     <div class="right-side">
@@ -282,7 +352,7 @@ return (
       <div class="team-members">
           <div class="team-member">
               <div class="image-container">
-                  <img src="/uday.png" alt="Team Member Image" />
+                  <img src="/uday.jpg" alt="Team Member Image" />
                   <div class="social-media-container">
                   <a href="https://www.linkedin.com/in/udayprakashsahu/" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin"></i>
@@ -364,13 +434,13 @@ return (
               <div class="image-container">
                   <img src="/anirudh.jpg" alt="Team Member Image" />
                   <div class="social-media-container">
-                  <a href="https://linkedin.com/in/uday" target="_blank" class="social-icon">
+                  <a href="https://www.linkedin.com/in/anirudh-saxena-481ba2245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin"></i>
                   </a>
-                  <a href="https://twitter.com/uday" target="_blank" class="social-icon">
+                  <a href="" target="_blank" class="social-icon">
                     <i class="fab fa-twitter"></i>
                   </a>
-                  <a href="https://instagram.com/uday" target="_blank" class="social-icon">
+                  <a href="" target="_blank" class="social-icon">
                     <i class="fab fa-instagram"></i>
                   </a>
           </div>
@@ -383,85 +453,108 @@ return (
           </div>
         </div>
 
-      {/* Map Section */}
-      <div className="map-section">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093745!2d144.95373531535934!3d-37.816279442021246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sin!4v1603104563980!5m2!1sen!2sin"
-          width="100%"
-          height="400"
-          style={{ border: "0" }}
-          allowFullScreen=""
-          loading="lazy"
-          title="Google Map"
-        ></iframe>
-      </div>
+       {/* Map Section */}
+<div className="map-section">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14009.091847020048!2d77.2090219242628!3d28.613939844524303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2c50c2f2c59%3A0x116a9a0dd23cd4e0!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1603104563980!5m2!1sen!2sin"
+    width="100%"
+    height="400"
+    style={{
+      border: "0",
+      filter: "invert(90%)",
+      borderRadius: "10px",
+    }}
+    allowFullScreen=""
+    loading="lazy"
+    title="Google Map - New Delhi"
+  ></iframe>
+</div>
+
+
 
       {/* Newsletter Section */}
-      <section className="newsletter">
-      <div class="content">
-        <div class="text">
-          <strong>Subscribe Our Newsletter</strong>
-          <p>Lorem ipsum dolor sit amet consectetur. Feugiat ut aliquet sit pellentesque sollicitudin. Egestas faucibus lacus diam in senectus consectetur. Mattis elit adipiscing quisque tellus scelerisque vehicula ante nunc.</p>
-          <form>
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit">SUBSCRIBE</button>
-          </form>
-        </div>
-        <div class="image">
-          <img src="/3d-rendering-isometric-fdgdf 1.png" alt="Newsletter Image" />
+      <section className="appnewsletter">
+  <div class="appcontent">
+    <div class="apptext">
+      <strong>Subscribe Our Newsletter</strong>
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Feugiat ut aliquet sit pellentesque sollicitudin. 
+        Egestas faucibus lacus diam in senectus consectetur. Mattis elit adipiscing quisque tellus scelerisque vehicula ante nunc.
+      </p>
+      <form>
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Get a Quote</button>
+      </form>
+    </div>
+    <div class="appimage">
+      <img src="/3d-rendering-isometric-fdgdf 1.png" alt="Newsletter Image" />
+    </div>
+  </div>
+</section>
+
+      {/*Footer*/}
+      <footer className="footerapp">
+  <div className="footerapp-section">
+    <div className="logon">
+      <div className="oval-bg">
+        <img
+          src="/Aarvasa_Logo-removebg 3(2).png"
+          alt="Aarvasa Logo 1"
+          className="logon-image"
+        />
+        <div classname = "imgtra">
+        <img
+          src="/Aarvasa_Logo-removebg 3(3).png"
+          alt="Aarvasa Logo 2"
+          className="logon-image"
+        />
         </div>
       </div>
-      </section>
+    </div>
+    <p>Building Dreams , Securing Futures</p>
+    <div className="appsocial-icons">
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-facebook"></i>
+      </a>
+    </div>
+  </div>
+  <div className="footerapp-section">
+    <h3 className="underlinedapp">Quick Links</h3>
+    <ul>
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Services</li>
+      <li>Our Team</li>
+    </ul>
+  </div>
+  <div className="footerapp-section">
+    <h3 className="underlinedapp">Privacy & Terms</h3>
+    <ul>
+      <li>Terms and Conditions</li>
+      <li>Privacy Policy</li>
+      <li>Refund and Cancellation Policy</li>
+      <li>Security</li>
+    </ul>
+  </div>
+  <div className="footerapp-section">
+    <h3 className="underlinedapp">Contact Us</h3>
+    <p>Technology Tower, VIT Vellore</p>
+    <p>Room No. 004, Ground Floor</p>
+    <p>Vellore, Tamil Nadu, 632014</p>
+    <p>Email: theaarvasa@gmail.com</p>
+  </div>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-section">
-          <h3>
-            <span className="time">Time</span>
-            <span className="slotter">Slotter</span>
-          </h3>
-          <p>Revolutionize scheduling with TimeSlotter.</p>
-          <div className="social-icons">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook"></i>
-            </a>
-          </div>
-        </div>
-        <div className="footer-section">
-          <h3 className="underlined">Quick Links</h3>
-          <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Our Team</li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h3 className="underlined">Privacy & Terms</h3>
-          <ul>
-            <li>Terms and Conditions</li>
-            <li>Privacy Policy</li>
-            <li>Refund and Cancellation Policy</li>
-            <li>Security</li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h3 className="underlined">Contact Us</h3>
-          <p>Technology Tower, VIT Vellore</p>
-          <p>Room No. 004, Ground Floor</p>
-          <p>Vellore, Tamil Nadu, 632014</p>
-          <p>Email: timeslotter@outlook.com</p>
-        </div>
-      </footer>
+</footer>
+
 
       </div>
   );

@@ -1,4 +1,3 @@
-
 /* General resets */
 /* General Background */
 body {
@@ -31,18 +30,19 @@ body {
   align-items: center;
   justify-content: space-between;
   text-align: left;
-  padding:  2rem; /* Increased padding for more height */
-  background-color: #1d1919; /* Background color for contrast */
-  border-radius: 30px; /* Rounded corners like navbar */
+  padding: 2rem;
+  background-color: #1d1919;
+  border-radius: 30px;
   width: 90%;
-  height: 400px; /* Centralized and responsive */
-  margin: 0 auto; /* Centers the hero section */
- 
+  height: 400px;
+  margin: 0 auto;
+  position: relative; /* Make it possible to position clouds */
+  overflow: hidden; /* Ensure clouds don't overflow the hero section */
 }
 
 .hero-content {
-  max-width: 50%; /* Ensure text content does not take up too much space */
-  color: #fff; /* Make text white */
+  max-width: 50%;
+  color: #fff;
 }
 
 .hero h1 {
@@ -53,16 +53,18 @@ body {
   font-size: 1.5rem;
   margin: 10px 0;
 }
-.button{
+
+.button {
   border-radius: 50px;
   color: purple;
 }
 
-.input{
+.input {
   border-radius: 30px;
   width: 30px;
 }
-.select{
+
+.select {
   width: 100px;
   height: 40px;
 }
@@ -70,10 +72,31 @@ body {
 .hero-image img {
   transform: translateY(20px);
   margin-left: 5.5%;
-  height:100%;
-  border-radius: 20px; /* Rounded corners */
-  border-radius: 10px; /* Rounded corners for the image */
+  height: 100%;
+  border-radius: 10px;
 }
+
+/* Cloud Styling */
+.cloud {
+  position: absolute;
+  fill: #cfcfcf; /* Greyish color */
+  opacity: 0.2; /* Reduced opacity for a softer look */
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Animation for floating clouds */
+@keyframes float {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 
 /* USP Section Styling */
 .usp {
@@ -487,201 +510,189 @@ body {
   margin-left: 10px; /* Space between 'with' and 'Aarvasa' */
 }
 
-/*Newsletter*/
-.newsletter {
+/* Newsletter Section */
+.appnewsletter {
   display: flex;
+  gap: 20px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  text-align: left;
-  padding:  2rem; /* Increased padding for more height */
-  background-image: linear-gradient(90deg,#3B2F2F,#C1A57B);/* Background color for contrast */
-  border-radius: 30px; /* Rounded corners like navbar */
+  padding: 2rem;
+  background-image: linear-gradient(90deg, #3B2F2F, #C1A57B);
+  border-radius: 30px;
   width: 88.5%;
-  height: 325px; /* Centralized and responsive */
+  height: 325px;
   margin: 0 auto;
   margin-bottom: 150px;
 }
 
-.content {
+.appcontent {
   display: flex;
-  justify-content: center; /* Center the content */
-  max-width: 900px;
-  margin-left: 60px;
-  
-   /* Space between text and image */
-}
-
-.text {
-  color: #C1A57B;
-  flex: 1;
-  margin-left: 240px;
-  margin-top: 120px;
-  max-width: 500px; /* Limit width for better alignment */
-  padding-right: 2rem;
-  transform: translateX(-50px);
-}
-
-.text strong {
- 
-  width: 500px;
-  margin-bottom: 1rem;
-  color: #fff;
-  font-size: 2.55rem;
-}
-
-.text p {
-  color:#C1A57B;
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
-}
-
-.text form {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
-.text input {
-  padding: 0.8rem;
-  margin-left: 50px;
- 
-  font-size: 1rem;
-  border: none;
-  border-radius: 30px; /* Oval shaped corners */
-  width: 250px;
-  outline: none;
-}
-
-.text input:focus {
-  border: 2px solid #6C1E3C; /* Highlight color */
-}
-
-.text button {
-  transform: translateX(-40px);
-  background-color: #6C1E3C;
-  margin-right: 230px;
+.apptext {
   color: #fff;
-  padding: 1rem 1rem ;
+  flex: 1;
+  max-width: 500px;
+}
+
+.apptext strong {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.apptext p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.apptext form {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents wrapping */
+  align-items: center; /* Ensures vertical alignment */
+  justify-content: flex-start; /* Aligns items to the left */
+  gap: 15px; /* Space between input and button */
+  margin-top: 20px;
+}
+
+.apptext input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #ddd; /* Subtle border for input */
+  border-radius: 30px;
+  flex: 1; /* Allows the input to grow naturally */
+  max-width: 300px; /* Prevents input from becoming too large */
+  outline: none;
+  box-sizing: border-box; /* Includes padding in width/height calculations */
+}
+
+.apptext button {
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #6C1E3C;
+  color: #fff;
   border: none;
-  border-radius: 30px; /* Oval shaped corners */
+  border-radius: 30px;
+  white-space: nowrap; /* Prevents text from wrapping */
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-.text button:hover {
-  background-color: #500f2c; /* Darken on hover */
+.apptext button:hover {
+  background-color: #500f2c; /* Darker background on hover */
 }
 
 
-
-.image img {
-  margin-left: 80px;
-  margin-top: 57px;
-  height: 81%;
+.appimage img {
+  margin-left: 20px;
+  height: 70%;
   border-radius: 8px;
+  transform: translateX(+45px);
 }
 
 /* Footer Section */
-.footer {
+.footerapp {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  background-color: #333;
-  color: #fff;
+  background-color: #6C1E3C;
+  color: #C1A57B;
 }
 
-.footer-section h3 {
+.footer-top {
+  padding-bottom: 40px;
+}
+
+.footerapp-section h3 {
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   position: relative;
+  color: #fff;
 }
 
-.footer-section h3 .time {
-  position: relative;
-  margin-right: 0.3rem;
-}
-
-.footer-section h3 .time::after {
+.footerapp-section h3.underlinedapp::after {
   content: '';
   display: block;
-  width: 50%; /* Half-length line */
+  width: 20%;
   height: 2px;
-  background-color: #ADD8E6; /* White line below "Time" */
+  background-color: #D4AF37;
   position: absolute;
   bottom: -5px;
   left: 0;
 }
 
-.footer-section h3 .slotter {
-  color: #ADD8E6; /* Light blue for "Slotter" */
+.footerapp-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerapp-section ul li {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+.footerapp-section p {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+/* Oval background for logos */
+.oval-bg {
+  background-color: #C1A57B;
+  border-radius: 1rem; /* Make it oval */
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.imgtra{
+  transform: translateX(-30px);
+}
+
+.logon-image {
+  width: 100px;
+  height: auto;
+  margin: 0 0.5rem;
 }
 
 /* Social Icons Section */
-.social-icons {
+.appsocial-icons {
   margin-top: 1rem;
 }
-.footer-words {
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem 0;
-  background-color: #444;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-.footer-words span {
-  flex: 1;
-  text-align: center;
-}
 
-.social-icons a {
-  color: #fff;
+.appsocial-icons a {
+  color: #C1A57B;
   margin: 0 0.5rem;
   font-size: 1.5rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: #ADD8E6; /* Light blue hover effect */
-}
-
-.footer-section h3.underlined::after {
-  content: '';
-  display: block;
-  width: 20%; /* width line for other sections */
-  height: 2px;
-  background-color: #ADD8E6; /* White underline */
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin: 0.5rem 0;
-  color: #F5F0E1;
+.appsocial-icons a:hover {
+  color: #D4AF37;
 }
 
 
+/* Maps */
 .map-section {
   padding: 2rem 1rem;
-  background-color: #F5F0E1; /* Matches the overall theme */
+  background-color: #333; /* Dark background */
   border-radius: 10px;
   margin: 2rem auto;
-  width: 80%; /* Centers the map section */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for emphasis */
+  width: 80%;
+  margin-bottom: 6rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow for dark theme */
 }
 
 .map-section iframe {
   border-radius: 10px;
+  filter: invert(90%); /* Dark mode for the embedded map */
 }
 
 /*Our Team*/
@@ -691,7 +702,7 @@ body {
   margin-bottom: 20px;
 }
 .our-team h2 {
-  transform: translateX(-35px);
+  transform: translateX(-55px);
   position: relative; /* Position relative to add the custom line */
   margin-top: 25px; /* Remove unnecessary space above */
   margin-bottom: 10px; /* Add spacing below the header */
@@ -843,7 +854,13 @@ body {
 .left-side p {
   margin: 5px 0;
   font-size: 16px;
-  color: #6C1E3C;
+  color: black;
+}
+
+.left-side h3 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: black;
 }
 
 .right-side {
@@ -862,6 +879,7 @@ body {
   border-radius: 25px;
   margin-right: 25px;  /* Space between the two buttons */
   text-align: center;
+  transform: translateX(+10px);
   display: inline-block;  /* Allow buttons to stay inline */
   width: auto;  /* Buttons will take as much width as needed */
 }
@@ -869,11 +887,6 @@ body {
 .free-btn {
   background-color: #F5F0E1;  /* Different background for the Free button */
   color: black;
-}
-
-.post-propertyapp-btn:hover, .free-btn:hover {
-  background-color: #C1A57B;  /* Change color on hover */
-  cursor: pointer;
 }
 
 @media only screen and (max-width: 430px) and (max-height: 932px) {
