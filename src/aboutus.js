@@ -1,108 +1,48 @@
-import React from "react";
-import "./aboutus.css";
+import React from 'react';
+import './aboutus.css';
 
-const Aboutus = () => {
-  return (
-    <div className="container">
-
-      <main className="main-content">
-        <section className="filters">
-          <input type="text" placeholder="New Delhi | City / Locality / Project" />
-          <button className="show-trends">Show Trends</button>
-        </section>
-
-        <section className="chart-section">
-          <h2>Rates and Trends</h2>
-
-          <div className="chart-container">
-            <h3>Locality Average Price</h3>
-            <div className="chart">
-              {/* Add your chart library or image here */}
-              <img src="/images/locality-price-chart.png" alt="Locality Average Price Chart" />
+const AboutUs = () => {
+    return (
+        <div className="about-section">
+            <h1>Who We Are :</h1>
+            <div className="about-content">
+                <img src="_0001.png" alt="Character" className="character-img" />
+                <p>
+                    <strong>So We Are Aarvasa</strong>, we are more than just real estate professionals — we are your 
+                    partners in creating a better future. With a passion for helping individuals and families find 
+                    their dream homes, we combine expertise, integrity, and innovation to deliver exceptional results. 
+                    Our team consists of seasoned professionals with deep roots in the community and a comprehensive 
+                    understanding of the real estate market. Whether you're buying your first home, upgrading to a 
+                    larger space, or investing in properties, we are dedicated to guiding you every step of the way.
+                </p>
             </div>
-            <p>
-              In Bangalore, Developed localities take up the majority of the positions in the list of localities which
-              have shown a high growth. Rachenahalli tops the list with 58.0% growth...
-            </p>
-          </div>
-
-          <div className="chart-container">
-            <h3>Locality Rental Yield</h3>
-            <div className="chart">
-              {/* Add your chart library or image here */}
-              <img src="/images/locality-rental-yield.png" alt="Locality Rental Yield Chart" />
+            <h2>"Connecting People with Perfect Properties and Smart Investments"</h2>
+            <div className="mission-vision">
+                <div className="card">
+                    <h3>Our Mission</h3>
+                    <p>
+                        "To democratize real estate investments by offering innovative solutions like flexible payment 
+                        plans, AR/VR property tours, and eco-conscious property insights, while providing a seamless 
+                        experience for buyers, sellers, and renters to maximize their returns and achieve financial 
+                        independence."
+                    </p>
+                </div>
+                <div className="card">
+                    <h3>Aarvasa</h3>
+                    <p>Simplifies Real Estate with Seamless Transactions, Investments, and Property Monetization</p>
+                    <button>Contact Us</button>
+                </div>
+                <div className="card">
+                    <h3>Our Vision</h3>
+                    <p>
+                        "To revolutionize real estate accessibility by creating a one-stop platform that empowers 
+                        individuals to invest, lease, and manage properties effortlessly while fostering financial 
+                        growth and sustainability."
+                    </p>
+                </div>
             </div>
-            <p>
-              Rental Yield represents annual return from renting your house in that locality. Rashtriya Vidyalaya Road
-              tops the list with 11.0% growth...
-            </p>
-          </div>
+        </div>
+    );
+};
 
-          <div className="chart-container">
-            <h3>Locality Demand</h3>
-            <div className="chart">
-              {/* Add your chart library or image here */}
-              <img src="/images/locality-demand.png" alt="Locality Demand Chart" />
-            </div>
-            <p>
-              Demand index represents change in locality demand keeping Jan'24 as base month. Phase 5 JP Nagar tops the
-              list with 34.0% growth...
-            </p>
-          </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-section">
-          <h3>
-            <span className="time">Time</span>
-            <span className="slotter">Slotter</span>
-          </h3>
-          <p>Revolutionize scheduling with TimeSlotter.</p>
-          <div className="social-icons">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook"></i>
-            </a>
-          </div>
-        </div>
-        <div className="footer-section">
-          <h3 className="underlined">Quick Links</h3>
-          <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Our Team</li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h3 className="underlined">Privacy & Terms</h3>
-          <ul>
-            <li>Terms and Conditions</li>
-            <li>Privacy Policy</li>
-            <li>Refund and Cancellation Policy</li>
-            <li>Security</li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h3 className="underlined">Contact Us</h3>
-          <p>Technology Tower, VIT Vellore</p>
-          <p>Room No. 004, Ground Floor</p>
-          <p>Vellore, Tamil Nadu, 632014</p>
-          <p>Email: timeslotter@outlook.com</p>
-        </div>
-      </footer>
-    </div>
-  );
-}
-
-export default Aboutus;
+export default AboutUs;

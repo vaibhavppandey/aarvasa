@@ -35,17 +35,7 @@ return (
     <ellipse cx="32" cy="16" rx="16" ry="8" />
     <ellipse cx="24" cy="12" rx="20" ry="10" />
   </svg>
-  <svg
-    className="cloud"
-    width="200"
-    height="100"
-    viewBox="0 0 64 32"
-    style={{ top: "50px", right: "5%" }}
-  >
-    <ellipse cx="16" cy="16" rx="16" ry="8" />
-    <ellipse cx="32" cy="16" rx="16" ry="8" />
-    <ellipse cx="24" cy="12" rx="20" ry="10" />
-  </svg>
+  
   <svg
     className="cloud"
     width="180"
@@ -498,17 +488,10 @@ return (
     <div className="logon">
       <div className="oval-bg">
         <img
-          src="/Aarvasa_Logo-removebg 3(2).png"
+          src="/AarvasaL.png"
           alt="Aarvasa Logo 1"
           className="logon-image"
         />
-        <div classname = "imgtra">
-        <img
-          src="/Aarvasa_Logo-removebg 3(3).png"
-          alt="Aarvasa Logo 2"
-          className="logon-image"
-        />
-        </div>
       </div>
     </div>
     <p>Building Dreams , Securing Futures</p>

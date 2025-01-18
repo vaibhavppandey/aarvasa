@@ -651,12 +651,9 @@ body {
   margin-bottom: 1rem;
 }
 
-.imgtra{
-  transform: translateX(-30px);
-}
 
 .logon-image {
-  width: 100px;
+  width: 200px;
   height: auto;
   margin: 0 0.5rem;
 }

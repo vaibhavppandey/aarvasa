@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     gap: 20px; /* Adjusted for better spacing */
-    transform: translateX(+45px);
+    transform: translateX(+55px);
   }
 
   .menu a {
@@ -43,7 +43,7 @@
 .profnav {
     display: flex;
     margin-left: 20px;
-    transform: translateX(+115px);
+    transform: translateX(+120px);
 }
 
 .profnav-icon svg {
