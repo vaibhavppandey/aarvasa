@@ -1,7 +1,59 @@
 import React from "react";
 import "./listings.css";
-
+import { useState } from "react";
+import LocationSelector from "./Locationselector";
 const Listing = () => {
+  const [filters, setFilters] = useState({
+    state: "all",
+    city: "all",
+    pincode: "",
+    price: { min: "", max: "" }, // Updated to an object
+    propertyType: "all",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      [name]: value,
+    }));
+  };
+
+  const handlePriceChange = (e) => {
+    const { name, value } = e.target; // 'name' will be 'min' or 'max'
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      price: {
+        ...prevFilters.price,
+        [name]: value,
+      },
+    }));
+  };
+  
+
+  const applyFilters = async () => {
+    console.log("Filters applied:", filters);
+    
+    try {
+      const response = await fetch('/filter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(filters), // Send the filter object as JSON
+      });
+      
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Filtered data:", data);
+        // Process the filtered data from API response if needed
+      } else {
+        console.error("Failed to apply filters");
+      }
+    } catch (error) {
+      console.error("Error applying filters:", error);
+    }
+  };
 
   const properties = [
     { 
@@ -78,11 +130,49 @@ const Listing = () => {
     <div className="property-listing-container">
       <h2>Top Projects in New Delhi</h2>
       <div className="filters">
-        <button>Budget</button>
-        <button>BHK</button>
-        <button>Possession</button>
-        <button>Ready to move in</button>
-      </div>
+  <h3>Filters</h3>
+  <div className="filter-options">
+      <LocationSelector/>
+
+      <label htmlFor="pincode">Pincode:</label>
+      <input
+        type="text"
+        id="pincode"
+        name="pincode"
+        value={filters.pincode}
+        onChange={handleInputChange}
+        placeholder="Enter Pincode"
+      />
+
+<label htmlFor="price-min">Price Range</label>
+<div className="price-range">
+  <input
+    type="text"
+    id="price-min"
+    name="min"
+    value={filters.price.min}
+    onChange={handlePriceChange}
+    placeholder="Min Price"
+  />
+  <span> - </span>
+  <input
+    type="text"
+    id="price-max"
+    name="max"
+    value={filters.price.max}
+    onChange={handlePriceChange}
+    placeholder="Max Price"
+  />
+</div>
+
+      
+
+      <button className="apply-filters" onClick={applyFilters}>
+        Apply Filters
+      </button>
+    </div>
+</div>
+
       {properties.map((property, index) => (
         <div key={index} className="property-card">
           <img
@@ -295,5 +385,7 @@ const Listing = () => {
     
   );
 };
+
+
 
 export default Listing;
