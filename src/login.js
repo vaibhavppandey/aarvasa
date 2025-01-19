@@ -1,7 +1,26 @@
 import React from "react";
 import "./login.css";
+import { GoogleLogin } from '@react-oauth/google';
+import { useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 
-const Login = () => {
+
+const Login = ({ updateParentState }) => {
+  const navigate = useNavigate();
+  const responseMessage = (response) => {
+    console.log(response);
+    const decoded = jwtDecode(response.credential);
+
+    const profilePicture = decoded.picture;
+
+    updateParentState({ profilePicture });
+    
+    navigate('/');
+};
+const errorMessage = (error) => {
+    console.log(error);
+};
+
   return (
     <div className="containerl">
 
@@ -11,7 +30,7 @@ const Login = () => {
         <div className="login-container">
           <div className="social-login">
             <button className="facebook">Log in using Facebook</button>
-            <button className="google">Log in using Google</button>
+            <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
             <button className="apple">Sign in with Apple</button>
           </div>
           <p>or login with Email</p>
@@ -86,7 +105,7 @@ const Login = () => {
         </div>
       </footer>
     </div>
-  );
+  )
 }
 
 export default Login;
