@@ -219,31 +219,30 @@ function W() {
           onLoad={(map) => (mapRef.current = map)}
         >
           {/* Add Marker for the user's coordinates */}
-          <Marker
-            position={coordinates}
-            onMouseOver={handleMarkerHover}
-            onMouseOut={handleMarkerOut}
-          />
-          {infoWindowVisible && (
-            <InfoWindow position={coordinates} onCloseClick={() => setInfoWindowVisible(false)}>
-              <div>{hoveredAddress}</div>
-            </InfoWindow>
-          )}
+          {nearby_prop.map((property, index) => {
+  console.log("Property:", property); // Check the property structure
+  return (
+    <Marker
+      key={index}
+      position={{
+        lat: property.latitude,
+        lng: property.longitude,
+      }}
+      icon={{
+        url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+        scaledSize: new window.google.maps.Size(32, 32),
+      }}
+    />
+  );
+})}
+
+
+        
+          
+          
 
           {/* Add markers for nearby properties */}
-          {nearby_prop.map((property, index) => (
-            <Marker
-              key={index}
-              position={{
-                lat: property.latitude,
-                lng: property.longitude,
-              }}
-              icon={{
-                url: `http://maps.google.com/mapfiles/ms/icons/${getRandomColor()}.png`, // Custom marker color
-                scaledSize: new window.google.maps.Size(32, 32), // Adjust size
-              }}
-            />
-          ))}
+          
         </GoogleMap>
       </LoadScript>
     </div>
