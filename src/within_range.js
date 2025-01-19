@@ -1,8 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-
+import React, { useEffect, useRef, useState } from "react";
+import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
+import "leaflet/dist/leaflet.css";
 import { Country, State, City } from "country-state-city";
-import { useState } from "react";
 
 function W() {
   const [states, setStates] = useState([]);
@@ -17,6 +16,8 @@ function W() {
   const mapRef = useRef(null);
   const [r, set_r] = useState("");
   const [coordinates, setCoordinates] = useState({ lat: 24.9748306, lng: 79.54356 });
+  const [hoveredAddress, setHoveredAddress] = useState(""); // For storing address
+  const [infoWindowVisible, setInfoWindowVisible] = useState(false); // For toggling InfoWindow visibility
 
   useEffect(() => {
     const allStates = State.getStatesOfCountry("IN");
@@ -27,11 +28,10 @@ function W() {
     const stateCode = e.target.value;
 
     if (stateCode) {
-      const stateDetails = State.getStateByCodeAndCountry(stateCode, "IN"); // Get state details
-      set_state(stateDetails.name); // Store full state name
+      const stateDetails = State.getStateByCodeAndCountry(stateCode, "IN");
+      set_state(stateDetails.name);
       setSelectedState(stateCode);
 
-      // Fetch cities for the selected state
       const allCities = City.getCitiesOfState("IN", stateCode);
       setCities(allCities);
     } else {
@@ -44,6 +44,33 @@ function W() {
   const handleCityChange = (e) => {
     const cityName = e.target.value;
     setcity(cityName);
+  };
+
+  // Reverse geocode the marker's position
+  const reverseGeocode = async (lat, lng) => {
+    try {
+      const response = await fetch(
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyCZQ7QBcNicwveYO_z21CjV_zkhM8nNb7M`
+      );
+      const data = await response.json();
+      if (data.results && data.results.length > 0) {
+        return data.results[0].formatted_address;
+      }
+      return "Address not found";
+    } catch (error) {
+      console.error("Error in reverse geocoding:", error);
+      return "Error retrieving address";
+    }
+  };
+
+  const handleMarkerHover = async () => {
+    const address = await reverseGeocode(coordinates.lat, coordinates.lng);
+    setHoveredAddress(address);
+    setInfoWindowVisible(true);
+  };
+
+  const handleMarkerOut = () => {
+    setInfoWindowVisible(false);
   };
 
   return (
@@ -129,7 +156,8 @@ function W() {
         />
       </div>
 
-      
+      <button>FILTER WITHIN THE RANGE</button>
+
       <LoadScript googleMapsApiKey="AIzaSyCZQ7QBcNicwveYO_z21CjV_zkhM8nNb7M">
         <GoogleMap
           mapContainerStyle={{ width: "100%", height: "500px" }}
@@ -138,7 +166,16 @@ function W() {
           onLoad={(map) => (mapRef.current = map)}
         >
           {/* Add Marker */}
-          <Marker position={coordinates} />
+          <Marker
+            position={coordinates}
+            onMouseOver={handleMarkerHover}
+            onMouseOut={handleMarkerOut}
+          />
+          {infoWindowVisible && (
+            <InfoWindow position={coordinates} onCloseClick={() => setInfoWindowVisible(false)}>
+              <div>{hoveredAddress}</div>
+            </InfoWindow>
+          )}
         </GoogleMap>
       </LoadScript>
     </div>
