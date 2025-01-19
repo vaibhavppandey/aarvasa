@@ -423,7 +423,7 @@
 
 /* Services Section */
 
-.formhead-container header h3 {
+.formhead-container h3 {
   transform: translateX(+40px);
   position: relative; /* Position relative to add the custom line */
   margin-top: 25px; /* Remove unnecessary space above */

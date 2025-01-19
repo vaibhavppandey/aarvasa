@@ -8,6 +8,7 @@ import Agents from "./agents"; // Agents page
 import Services from "./services"; // Services page
 import PropertyListing from "./listings"; // Property Listings page
 import Login from "./login"; // Login page
+import ContactUs from "./contactus"; // Contact Us page
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: "services", element: <Services /> }, // Services route
       { path: "PropertyListing", element: <PropertyListing /> }, // Property Listing route
       { path: "login", element: <Login /> }, // Login route
+      { path: "contactus", element: <ContactUs /> }, // Contact Us route
     ],
   },
 ]);
