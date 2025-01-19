@@ -18,6 +18,7 @@ function W() {
   const [coordinates, setCoordinates] = useState({ lat: 24.9748306, lng: 79.54356 });
   const [hoveredAddress, setHoveredAddress] = useState(""); // For storing address
   const [infoWindowVisible, setInfoWindowVisible] = useState(false); // For toggling InfoWindow visibility
+  const [nearby_prop, set_near_by_prop] = useState([]);
 
   useEffect(() => {
     const allStates = State.getStatesOfCountry("IN");
@@ -71,6 +72,58 @@ function W() {
 
   const handleMarkerOut = () => {
     setInfoWindowVisible(false);
+  };
+
+  const getRandomColor = () => {
+    // Function to generate random colors for each marker
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  let filter = async () => {
+    const addressdetails = area.split(",");
+
+    let v = [];
+
+    for (let a in addressdetails) {
+      let s = addressdetails[a].trim();
+      if (s == state || s == city || s == pincode) {
+        continue;
+      } else {
+        v.push(s);
+      }
+    }
+
+    const fullAddress = `${v}, ${city}, ${state}, ${pincode}`;
+    const requestData = {
+      address: fullAddress,
+      range: parseFloat(r),
+    };
+    try {
+      const response = await fetch("http://localhost:8000/get_within_range", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        console.log("Nearby Properties:", result.nearbyProperties);
+        set_near_by_prop([...result.nearbyProperties]);
+        alert("Data fetched successfully. Check console for details.");
+      } else {
+        console.error("Error:", result.error);
+        alert("Error fetching data. See console for details.");
+      }
+    } catch (error) {
+      console.error("Request failed:", error);
+      alert("Failed to send request. See console for details.");
+    }
   };
 
   return (
@@ -156,7 +209,7 @@ function W() {
         />
       </div>
 
-      <button>FILTER WITHIN THE RANGE</button>
+      <button onClick={filter}>FILTER WITHIN THE RANGE</button>
 
       <LoadScript googleMapsApiKey="AIzaSyCZQ7QBcNicwveYO_z21CjV_zkhM8nNb7M">
         <GoogleMap
@@ -165,7 +218,7 @@ function W() {
           zoom={15}
           onLoad={(map) => (mapRef.current = map)}
         >
-          {/* Add Marker */}
+          {/* Add Marker for the user's coordinates */}
           <Marker
             position={coordinates}
             onMouseOver={handleMarkerHover}
@@ -176,6 +229,21 @@ function W() {
               <div>{hoveredAddress}</div>
             </InfoWindow>
           )}
+
+          {/* Add markers for nearby properties */}
+          {nearby_prop.map((property, index) => (
+            <Marker
+              key={index}
+              position={{
+                lat: property.latitude,
+                lng: property.longitude,
+              }}
+              icon={{
+                url: `http://maps.google.com/mapfiles/ms/icons/${getRandomColor()}.png`, // Custom marker color
+                scaledSize: new window.google.maps.Size(32, 32), // Adjust size
+              }}
+            />
+          ))}
         </GoogleMap>
       </LoadScript>
     </div>
