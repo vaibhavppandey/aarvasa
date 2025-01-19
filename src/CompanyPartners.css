@@ -5,13 +5,25 @@
     border-radius: 10px;
   }
   
-  .partners-container h3 {
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #6C1E3C;
-    text-decoration: underline;
-    text-decoration-color: #6C1E3C;
+.partners-containerabove h2 {
+    transform: translateX(-55px);
+    position: relative; /* Position relative to add the custom line */
+    margin-top: 25px; /* Remove unnecessary space above */
+    margin-bottom: 10px; /* Add spacing below the header */
+    font-size: 2rem; /* Adjust font size as needed */
+    text-align: left; /* Align text to the left */
+    text-decoration: none; /* Remove any text underline */
+    border: none; /* Remove any extra border */
+  }
+  
+.partners-containerabove h2::after {
+    content: ""; /* Empty content for the custom line */
+    display: block;
+    width: 50px; /* Width of the line, matching the "Our" text length */
+    height: 4px; /* Thickness of the line */
+    background-color: #6C1E3C; /* Line color */
+    border-radius: 5px;
+    margin-top: 5px; /* Space between the text and the line */
   }
   
   .partners-logos {
