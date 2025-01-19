@@ -91,12 +91,14 @@ function W() {
 
     for (let a in addressdetails) {
       let s = addressdetails[a].trim();
-      if (s == state || s == city || s == pincode) {
+      let rtyu = s.toLowerCase();
+      if (s == state || s == city || s == pincode || rtyu == 'india') {
         continue;
       } else {
         v.push(s);
       }
     }
+    let i = "India";
 
     const fullAddress = `${v}, ${city}, ${state}, ${pincode}`;
     const requestData = {
