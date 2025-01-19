@@ -322,6 +322,7 @@ button:hover {
   background-color: #500f2c;
 }
 
+
 /* Service One */
 .serviceone {
   display: grid;
@@ -457,7 +458,7 @@ button:hover {
   margin: 0 0.5rem;
 }
 
-@media only screen and (max-width: 430px) and (max-height: 932px) {
+@media only screen and (max-width: 431px) and (max-height: 933px) {
   .serviceone {
     display: flex;
     flex-direction: column;
@@ -466,12 +467,15 @@ button:hover {
     position: relative;
   }
 
-  /* Move image behind the text */
+  
   .serviceone img {
     width: 90%;
     height: auto;
-    transform: translateY(100px); /* Contract the image and move it behind the text */
-    z-index: -1; /* Image moves behind the text */
+    border-radius: 5%;
+    object-fit: fill;
+    align-items: center;
+    padding-left: 0;
+    
   }
 
   .serleftpart {
@@ -484,5 +488,75 @@ button:hover {
 
   .seryellowbox {
     align-self: center;
+  }
+
+  .serbuttons {
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+  .servicetwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  .servicetwo img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    align-items: center;
+    padding-left: 0;
+  }
+  .sertextright{
+    padding-left: 10%;
+    padding-right: 1%;
+    padding-top: 0;
+    z-index: 1;
+    font-size: x-large;
+    font-weight: 500;
+    text-align: left;
+    align-self: center;
+    flex: 100%;
+  }
+  .serreviewcards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  .sertextt{
+    font-size: medium;
+    flex: 70%;
+  }
+  .serbookdemobutton{
+    width: max-content;
+    flex: 30%;
+  }
+  .serbuttoncontent{
+    font-size: small;
+  }
+  .serconsultation{
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    margin-bottom: 5%;
+    padding-bottom: 4%;
+    padding-right: 4%;
+    padding-top: 4%;
+    margin-left: 4%;
+  }
+  .serimage{
+    width: 90%;
+    height: auto;
+    border-radius: 5%;
+    object-fit: fill;
+    align-items: center;
+    padding-left: 0;
   }
 }
