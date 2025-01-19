@@ -115,7 +115,9 @@ const Navbar = ({i,k}) => {
                 </svg>
             </Link>
             </div>
+            <Link to="/contactus">
             <button className="contact-btn">Contact us</button>
+            </Link>
         </header>
        
     );

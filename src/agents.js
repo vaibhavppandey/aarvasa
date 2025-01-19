@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './agents.css';
 const agentsData = [
   {
