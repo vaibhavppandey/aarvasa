@@ -14,11 +14,11 @@ const AboutUs = () => {
     ];
 
     const partners = [
-        { name: "Timeslotter pvt Ltd", logo: "path/to/timeslotter-logo.png" },
-        { name: "PSAssociates", logo: "path/to/psassociates-logo.png" },
-        { name: "Paramjyoti pvt Ltd", logo: "path/to/paramjyoti-logo.png" },
-        { name: "Ealth technologies", logo: "path/to/ealthtechnologies-logo.png" },
-        { name: "Softwave", logo: "path/to/softwave-logo.png" },
+        { name: "Timeslotter pvt Ltd", logo: "Rectangle 349.png" },
+        { name: "PSAssociates", logo: "Rectangle 352.png" },
+        { name: "Paramjyoti pvt Ltd", logo: "Rectangle 355.png" },
+        { name: "Ealth technologies", logo: "Rectangle 358.png" },
+        { name: "Softwave", logo: "Rectangle 358(1).png" },
       ];
 
     return (
