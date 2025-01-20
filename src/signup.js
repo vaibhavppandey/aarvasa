@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function S() {
+    const navigate = useNavigate();
   // Define individual state variables for each form field
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -59,7 +61,10 @@ function S() {
 
       const result = await response.json();
       if (response.ok) {
+
         console.log("Signup successful:", result);
+        navigate('/');
+
       } else {
         console.error("Signup failed:", result);
       }
