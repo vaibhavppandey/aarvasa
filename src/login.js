@@ -3,7 +3,7 @@ import "./login.css";
 import { GoogleLogin } from '@react-oauth/google';
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
-
+import { Link } from "react-router-dom";
 
 const Login = ({ updateParentState }) => {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ const errorMessage = (error) => {
             <button type="submit" className="submit-btn">Log In</button>
           </form>
           <p>
-            New account: <a href="#">Sign up</a>
+          <Link to="/signup">signup</Link>
           </p>
         </div>
         <strong className="view-policy1">By signing up for Aarvasa, you agree to the Terms of Service.<br></br></strong>

@@ -8,7 +8,7 @@ import Agents from "./agents"; // Agents page
 import Services from "./services"; // Services page
 import PropertyListing from "./listings"; // Property Listings page
 import Login from "./login"; // Login page
-
+import S from "./signup";
 import { useState } from "react";
 import W from "./within_range";
 
@@ -33,6 +33,7 @@ const Main = () => {
         { path: "PropertyListing", element: <PropertyListing /> }, // Property Listing route
         { path: "login", element: <Login updateParentState={change_log} /> }, // Pass user state and setter to Login
         { path: "w", element: <W/> },
+        { path: "signup", element: <S/> },
       ],
     },
   ]);

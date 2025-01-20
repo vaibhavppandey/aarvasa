@@ -116,7 +116,12 @@ function W() {
 
       if (response.ok) {
         console.log("Nearby Properties:", result.nearbyProperties);
-        set_near_by_prop([...result.nearbyProperties]);
+        let rds = [];
+        rds.push({latitude:0,longitude:0});
+        for(let t in result.nearbyProperties){
+          rds.push(result.nearbyProperties[t]);
+        }
+        set_near_by_prop([...rds]);
         alert("Data fetched successfully. Check console for details.");
       } else {
         console.error("Error:", result.error);
