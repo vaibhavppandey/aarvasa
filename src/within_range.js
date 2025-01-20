@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
 import "leaflet/dist/leaflet.css";
 import { Country, State, City } from "country-state-city";
-
+import "./listings.css";
 function W() {
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
@@ -19,6 +19,7 @@ function W() {
   const [hoveredAddress, setHoveredAddress] = useState(""); // For storing address
   const [infoWindowVisible, setInfoWindowVisible] = useState(false); // For toggling InfoWindow visibility
   const [nearby_prop, set_near_by_prop] = useState([]);
+  const [filtered_properties,set_filtered_properties] = useState([]);
 
   useEffect(() => {
     const allStates = State.getStatesOfCountry("IN");
@@ -116,12 +117,18 @@ function W() {
 
       if (response.ok) {
         console.log("Nearby Properties:", result.nearbyProperties);
+        let temp = [];
+        for(let c in result.nearbyProperties){
+          temp.push(result.nearbyProperties[c]);
+
+        }
         let rds = [];
         rds.push({latitude:0,longitude:0});
         for(let t in result.nearbyProperties){
           rds.push(result.nearbyProperties[t]);
         }
         set_near_by_prop([...rds]);
+        set_filtered_properties([...temp]);
         alert("Data fetched successfully. Check console for details.");
       } else {
         console.error("Error:", result.error);
@@ -252,6 +259,30 @@ function W() {
           
         </GoogleMap>
       </LoadScript>
+
+      {
+        filtered_properties.map((property, index)=>{
+          return (
+            <div key={index} className="property-card">
+          <img
+            src={property.uploadedMediaUrls[0]}
+            alt=""
+            className="property-image"
+          />
+          <div className="property-details">
+            <h3>{property.city}</h3>
+            <p>{property.state}</p>
+            <p>{property.price}</p>
+            <p>{property.size}</p>
+            <p>{property.sqftPrice}</p>
+            <p>{property.pincode}</p>
+            <p>{property.addressDetails}</p>
+          </div>
+        </div>
+          );
+
+        })
+      }
     </div>
   );
 }
