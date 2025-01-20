@@ -41,6 +41,7 @@ const errorMessage = (error) => {
           </form>
           <p>
           <Link to="/signup">signup</Link>
+          
           </p>
         </div>
         <strong className="view-policy1">By signing up for Aarvasa, you agree to the Terms of Service.<br></br></strong>
