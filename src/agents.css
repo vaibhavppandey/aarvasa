@@ -4,53 +4,13 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.container {
+.containera {
   display: flex;
   flex-direction: column;
   background-color: #F5F0E1;
   min-height: 100vh;
   padding: 0;
   margin: 0 auto;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-container {
-  display: flex;
-  align-items: center;
-  background-color: #F5F0E1; /* Oval background color */
-  border-radius: 50px; /* Rounded edges for the oval */
-  padding: 5px 20px; /* Padding to create space inside the oval */
-}
-
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: 500;
-  margin-right: 15px; /* Space between menu items */
-}
-
-.search-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  margin-left: 5px;
-  cursor: pointer;
-}
-
-.search-button svg {
-  fill: #000; /* Black color for the icon */
-  transition: transform 0.3s;
-}
-
-.search-button:hover svg {
-  transform: scale(1.2); /* Slight zoom effect on hover */
 }
 
 .agents-page {
@@ -287,88 +247,3 @@ h2 {
   text-decoration: none;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 2rem;
-  background-color: #333;
-  color: #fff;
-}
-
-.footer-section h3 {
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.footer-section h3 .time {
-  position: relative;
-  margin-right: 0.3rem;
-}
-
-.footer-section h3 .time::after {
-  content: '';
-  display: block;
-  width: 50%; /* Half-length line */
-  height: 2px;
-  background-color: #ADD8E6; /* White line below "Time" */
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-}
-
-.footer-section h3 .slotter {
-  color: #ADD8E6; /* Light blue for "Slotter" */
-}
-
-/* Social Icons Section */
-.social-icons {
-  margin-top: 1rem;
-}
-.footer-words {
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem 0;
-  background-color: #444;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-.footer-words span {
-  flex: 1;
-  text-align: center;
-}
-
-.social-icons a {
-  color: #fff;
-  margin: 0 0.5rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #ADD8E6; /* Light blue hover effect */
-}
-
-.footer-section h3.underlined::after {
-  content: '';
-  display: block;
-  width: 20%; /* width line for other sections */
-  height: 2px;
-  background-color: #ADD8E6; /* White underline */
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin: 0.5rem 0;
-  color: #F5F0E1;
-}

@@ -146,54 +146,63 @@ const Agents = () => {
       ))}
     </div>
   </div>
-  <footer className="footer">
-        <div className="footer-section">
-          <h3>
-            <span className="time">Time</span>
-            <span className="slotter">Slotter</span>
-          </h3>
-          <p>Revolutionize scheduling with TimeSlotter.</p>
-          <div className="social-icons">
+
+
+  {/*Footer*/}
+  <footer className="footerapp">
+        <div className="footerapp-section">
+            <div className="logon">
+            <div className="oval-bg">
+                <img
+                src="/AarvasaL.png"
+                alt="Aarvasa Logo 1"
+                className="logon-image"
+                />
+            </div>
+            </div>
+            <p>Building Dreams , Securing Futures</p>
+            <div className="appsocial-icons">
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i>
+                <i className="fab fa-linkedin"></i>
             </a>
             <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
+                <i className="fab fa-twitter"></i>
             </a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
             </a>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook"></i>
+                <i className="fab fa-facebook"></i>
             </a>
-          </div>
+            </div>
         </div>
-        <div className="footer-section">
-          <h3 className="underlined">Quick Links</h3>
-          <ul>
+        <div className="footerapp-section">
+            <h3 className="underlinedapp">Quick Links</h3>
+            <ul>
             <li>Home</li>
             <li>About Us</li>
             <li>Services</li>
             <li>Our Team</li>
-          </ul>
+            </ul>
         </div>
-        <div className="footer-section">
-          <h3 className="underlined">Privacy & Terms</h3>
-          <ul>
+        <div className="footerapp-section">
+            <h3 className="underlinedapp">Privacy & Terms</h3>
+            <ul>
             <li>Terms and Conditions</li>
             <li>Privacy Policy</li>
             <li>Refund and Cancellation Policy</li>
             <li>Security</li>
-          </ul>
+            </ul>
         </div>
-        <div className="footer-section">
-          <h3 className="underlined">Contact Us</h3>
-          <p>Technology Tower, VIT Vellore</p>
-          <p>Room No. 004, Ground Floor</p>
-          <p>Vellore, Tamil Nadu, 632014</p>
-          <p>Email: timeslotter@outlook.com</p>
+        <div className="footerapp-section">
+            <h3 className="underlinedapp">Contact Us</h3>
+            <p>Technology Tower, VIT Vellore</p>
+            <p>Room No. 004, Ground Floor</p>
+            <p>Vellore, Tamil Nadu, 632014</p>
+            <p>Email: theaarvasa@gmail.com</p>
         </div>
-      </footer>
+
+        </footer>
   </div>
   );
 }
