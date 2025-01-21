@@ -29,13 +29,8 @@ const Navbar = ({i,k}) => {
                 <div className="logon">
                     <Link to="/">
                         <img
-                            src="/Aarvasa_Logo-removebg 3(2).png"
+                            src="/AarvasaL.png"
                             alt="Aarvasa Logo 1"
-                            className="logon-image"
-                        />
-                        <img
-                            src="/Aarvasa_Logo-removebg 3(3).png"
-                            alt="Aarvasa Logo 2"
                             className="logon-image"
                         />
                     </Link>
@@ -82,13 +77,8 @@ const Navbar = ({i,k}) => {
             <div className="logon">
                 <Link to="/">
                     <img
-                        src="/Aarvasa_Logo-removebg 3(2).png"
+                        src="/AarvasaL.png"
                         alt="Aarvasa Logo 1"
-                        className="logon-image"
-                    />
-                    <img
-                        src="/Aarvasa_Logo-removebg 3(3).png"
-                        alt="Aarvasa Logo 2"
                         className="logon-image"
                     />
                 </Link>
