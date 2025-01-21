@@ -6,8 +6,9 @@ import App from "./App"; // Home page
 import AboutUs from "./aboutus"; // About Us page
 import Agents from "./agents"; // Agents page
 import Services from "./services"; // Services page
-import PropertyListing from "./listings"; // Property Listings page
+import Listings from "./listings"; // Property Listings page
 import Login from "./login"; // Login page
+import ContactUs from "./contactus"; // Contact Us page
 import S from "./signup";
 import { useState } from "react";
 import W from "./within_range";
@@ -30,7 +31,8 @@ const Main = () => {
         { path: "aboutus", element: <AboutUs /> }, // About Us route
         { path: "agents", element: <Agents /> }, // Agents route
         { path: "services", element: <Services /> }, // Services route
-        { path: "PropertyListing", element: <PropertyListing /> }, // Property Listing route
+        { path: "listings", element: <Listings /> }, // Property Listing route
+        { path: "contactus", element: <ContactUs />},// Contact Us route
         { path: "login", element: <Login updateParentState={change_log} /> }, // Pass user state and setter to Login
         { path: "w", element: <W/> },
         { path: "signup", element: <S/> },

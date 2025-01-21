@@ -74,131 +74,131 @@ function S() {
   };
 
   return (
-    <div>
-      <h2>User Details Form</h2>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
-            onChange={updateEmail}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={updatePassword}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Full Name:
-          <input
-            type="text"
-            value={fullName}
-            onChange={updateFullName}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Contact No:
-          <input
-            type="text"
-            value={contactNumber}
-            onChange={updateContactNumber}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Country Code:
-          <input
-            type="text"
-            value={countryCode}
-            onChange={updateCountryCode}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Age:
-          <input
-            type="number"
-            value={age}
-            onChange={updateAge}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Area:
-          <input
-            type="text"
-            value={area}
-            onChange={updateArea}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Pincode:
-          <input
-            type="number"
-            value={pincode}
-            onChange={updatePincode}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          State:
-          <input
-            type="text"
-            value={state}
-            onChange={updateState}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          District:
-          <input
-            type="text"
-            value={district}
-            onChange={updateDistrict}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Road No:
-          <input
-            type="text"
-            value={roadNo}
-            onChange={updateRoadNo}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          PAN Card No:
-          <input
-            type="text"
-            value={panCard}
-            onChange={updatePanCard}
-            required
-          />
-        </label>
-        <br />
-        <button onClick={signup}>Submit</button>
-      </form>
+    <div className="form-container">
+  <h2>User Details Form</h2>
+  <form onSubmit={(e) => e.preventDefault()}>
+    <div className="form-group">
+      <label>Email:</label>
+      <input
+        type="email"
+        value={email}
+        onChange={updateEmail}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>Password:</label>
+      <input
+        type="password"
+        value={password}
+        onChange={updatePassword}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>Full Name:</label>
+      <input
+        type="text"
+        value={fullName}
+        onChange={updateFullName}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>Contact No:</label>
+      <input
+        type="text"
+        value={contactNumber}
+        onChange={updateContactNumber}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>Country Code:</label>
+      <input
+        type="text"
+        value={countryCode}
+        onChange={updateCountryCode}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>Age:</label>
+      <input
+        type="number"
+        value={age}
+        onChange={updateAge}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>Area:</label>
+      <input
+        type="text"
+        value={area}
+        onChange={updateArea}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>Pincode:</label>
+      <input
+        type="number"
+        value={pincode}
+        onChange={updatePincode}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>State:</label>
+      <input
+        type="text"
+        value={state}
+        onChange={updateState}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>District:</label>
+      <input
+        type="text"
+        value={district}
+        onChange={updateDistrict}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>Road No:</label>
+      <input
+        type="text"
+        value={roadNo}
+        onChange={updateRoadNo}
+        required
+      />
+    </div>
+
+    <div className="form-group">
+      <label>PAN Card No:</label>
+      <input
+        type="text"
+        value={panCard}
+        onChange={updatePanCard}
+        required
+      />
+    </div>
+
+    <button className="submit-btn" onClick={signup}>Submit</button>
+  </form>
       {/*Footer*/}
       <footer className="footerapp">
   <div className="footerapp-section">

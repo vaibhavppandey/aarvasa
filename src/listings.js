@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Country, State, City } from "country-state-city";
 import "./listings.css";
 import { useNavigate } from "react-router-dom";
-const Listing = () => {
+const Listings = () => {
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
   const [selectedState, setSelectedState] = useState("");
@@ -258,7 +258,6 @@ const Listing = () => {
             <p>{property.type}</p>
           </div>
         </div>
-      ))}
   
     {/*Footer*/}
       <footer className="footerapp">
@@ -319,4 +318,4 @@ const Listing = () => {
   );
 };
 
-export default Listing;
+export default Listings;
