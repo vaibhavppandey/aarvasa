@@ -9,6 +9,7 @@ import Services from "./services"; // Services page
 import PropertyListing from "./listings"; // Property Listings page
 import Login from "./login"; // Login page
 import ContactUs from "./contactus"; // Contact Us page
+import SignUp from "./signup"
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "PropertyListing", element: <PropertyListing /> }, // Property Listing route
       { path: "login", element: <Login /> }, // Login route
       { path: "contactus", element: <ContactUs /> }, // Contact Us route
+      { path: "signup" , element: <SignUp /> }, // Sign Up route
     ],
   },
 ]);

@@ -1,5 +1,6 @@
 import React from "react";
 import "./login.css";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -21,7 +22,7 @@ const Login = () => {
             <button type="submit" className="submit-btn">Log In</button>
           </form>
           <p>
-            New account: <a href="#">Sign up</a>
+            New account: <Link to="/signup">Sign up</Link>
           </p>
         </div>
         <strong className="view-policy1">By signing up for Aarvasa, you agree to the Terms of Service.<br></br></strong>
