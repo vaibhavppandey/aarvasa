@@ -460,33 +460,24 @@ button:hover {
   margin: 0 0.5rem;
 }
 
-<<<<<<< HEAD
 @media only screen and (max-width: 431px) and (max-height: 933px) {
-=======
 @media (max-width: 1200px) {
->>>>>>> c258e12dbf97be13e45416238ccb666da16852cc
   .serviceone {
     grid-template-columns: 1fr; /* Stack the columns */
     text-align: center;
     padding: 2rem;
   }
 
-<<<<<<< HEAD
   
-=======
->>>>>>> c258e12dbf97be13e45416238ccb666da16852cc
   .serviceone img {
     width: 100%;
     height: auto;
-<<<<<<< HEAD
     border-radius: 5%;
     object-fit: fill;
     align-items: center;
     padding-left: 0;
     
-=======
     padding-left: 0;
->>>>>>> c258e12dbf97be13e45416238ccb666da16852cc
   }
 
   .serleftpart {
@@ -499,7 +490,6 @@ button:hover {
     align-items: center;
   }
 
-<<<<<<< HEAD
   .serbuttons {
     justify-content: center;
     margin-bottom: 5%;
@@ -570,7 +560,6 @@ button:hover {
     padding-left: 0;
   }
 }
-=======
   .sermarooncontactus,
   .seroutlineviewservices {
     width: 100%;
@@ -697,4 +686,3 @@ button:hover {
     font-size: small;
   }
 }
->>>>>>> c258e12dbf97be13e45416238ccb666da16852cc
