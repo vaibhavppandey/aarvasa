@@ -5,7 +5,7 @@
 
 /*Header*/
 .about-contentaboveheader h2 {
-  transform: translateX(-55px);
+  transform: translateX(+5px);
   position: relative; /* Position relative to add the custom line */
   margin-top: 25px; /* Remove unnecessary space above */
   margin-bottom: 10px; /* Add spacing below the header */
@@ -258,7 +258,7 @@
   margin-bottom: 20px;
 }
 .our-team h2 {
-  transform: translateX(-55px);
+  transform: translateX(+5px);
   position: relative; /* Position relative to add the custom line */
   margin-top: 25px; /* Remove unnecessary space above */
   margin-bottom: 10px; /* Add spacing below the header */
@@ -445,7 +445,7 @@
 }
 
 .asserWhatclients h2 {
-  transform: translateX(-55px);
+  transform: translateX(+5px);
   position: relative; /* Position relative to add the custom line */
   margin-top: 35px; /* Remove unnecessary space above */
   margin-bottom: 35px; /* Add spacing below the header */

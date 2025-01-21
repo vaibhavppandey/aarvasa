@@ -23,7 +23,7 @@ const Agents = () => {
     <div className="containera">
 
     <div className="agents-page">
-    <h2>Agents in New Delhi who can help you</h2>
+    <div classname = "agents-heading"><h2>Agents in New Delhi who can help you</h2></div>
     <div className="agents-list">
       {agentsData.map((agent) => (
         <div className="agent-card" key={agent.id}>
