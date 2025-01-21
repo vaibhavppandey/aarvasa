@@ -242,8 +242,8 @@ const AboutUs = () => {
       <CompanyPartners partners={partners} />
     </div>
 
-    <div classname = "formhead-container">
-        <h3>Contact Us:</h3>
+    <div>
+        <h3 classname = "formhead-container">Contact Us:</h3>
     </div>
     <div>
     <section className="aboutusserconsultation">

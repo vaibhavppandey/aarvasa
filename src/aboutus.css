@@ -5,7 +5,7 @@
 
 /*Header*/
 .about-contentaboveheader h2 {
-  transform: translateX(-55px);
+  transform: translateX(+5px);
   position: relative; /* Position relative to add the custom line */
   margin-top: 25px; /* Remove unnecessary space above */
   margin-bottom: 10px; /* Add spacing below the header */
@@ -258,7 +258,7 @@
   margin-bottom: 20px;
 }
 .our-team h2 {
-  transform: translateX(-55px);
+  transform: translateX(+5px);
   position: relative; /* Position relative to add the custom line */
   margin-top: 25px; /* Remove unnecessary space above */
   margin-bottom: 10px; /* Add spacing below the header */
@@ -423,7 +423,7 @@
 
 /* Services Section */
 
-.formhead-container header h3 {
+.formhead-container h3 {
   transform: translateX(+40px);
   position: relative; /* Position relative to add the custom line */
   margin-top: 25px; /* Remove unnecessary space above */
@@ -445,7 +445,7 @@
 }
 
 .asserWhatclients h2 {
-  transform: translateX(-55px);
+  transform: translateX(+5px);
   position: relative; /* Position relative to add the custom line */
   margin-top: 35px; /* Remove unnecessary space above */
   margin-bottom: 35px; /* Add spacing below the header */
@@ -628,4 +628,208 @@ button:hover {
   width: 200px;
   height: auto;
   margin: 0 0.5rem;
+}
+
+@media (max-width: 430px) and (max-height: 932px) {
+  .milestones {
+    margin: 20px auto; /* Reduce margin for smaller screens */
+    padding: 15px; /* Adjust padding for compact spacing */
+    max-width: 95%; /* Use most of the screen width */
+    border-radius: 8px; /* Slightly smaller rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .milestones-header h3 {
+    font-size: 1.5rem; /* Adjust font size for small screens */
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+
+  .milestones-header h3::after {
+    width: 40px; /* Adjust width of the underline */
+    height: 3px; /* Adjust thickness */
+  }
+
+  .timeline {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+  }
+
+  .timeline-item {
+    flex: none; /* Prevent stretching */
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing between items */
+  }
+
+  .timeline-star svg {
+    width: 25px; /* Smaller icon size */
+    height: 25px;
+  }
+
+  .timeline-month {
+    font-size: 14px; /* Adjust font size */
+    margin-bottom: 4px;
+  }
+
+  .timeline-description {
+    font-size: 13px; /* Reduce text size for better fit */
+  }
+
+  .timeline-connector {
+    position: absolute;
+    height: 6px; /* Reduce connector thickness */
+    top: auto; /* Adjust positioning */
+    left: 0;
+    right: 0;
+  }
+
+  .timeline-connector .dot {
+    width: 4px; /* Smaller dots */
+    height: 4px;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    top: auto; /* Prevent overlap in stacked layout */
+    left: 50%; /* Center the connector */
+    width: 2px; /* Vertical line for stacked layout */
+    height: 20px; /* Length of the vertical connector */
+    background-color: #ccc;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item:first-child::before,
+  .timeline-item:last-child::after {
+    display: none; /* Hide connectors for start/end items */
+  }
+}
+
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .team-members {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center-align the items */
+    gap: 15px; /* Slightly increased spacing for better layout */
+  }
+
+  .team-member {
+    flex: 1 1 calc(45% - 15px); /* Increase card width to 45% of container */
+    max-width: calc(45% - 15px); /* Ensure it doesn't exceed this width */
+    height: auto; /* Let the height adjust dynamically */
+    min-width: 140px; /* Slightly increased minimum width */
+    padding: 10px; /* Add padding to ensure content fits */
+  }
+
+  .image-container {
+    height: 180px; /* Adjust height for better proportion */
+  }
+
+  .image-container img {
+    object-fit: cover; /* Keep images proportional */
+    width: 100%;
+    height: 100%;
+  }
+
+  .info-container {
+    padding: 12px; /* Add padding for better spacing */
+    text-align: center;
+    background-color: #C1A57B; /* Retain background color */
+    color: black;
+    width: 95%;
+    transform: translateY(+10px);
+  }
+
+  .name {
+    font-size: 16px; /* Adjusted for better readability */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #6c1e3c8c;
+  }
+
+  .designation {
+    font-size: 13px; /* Adjusted font size for smaller screens */
+    line-height: 1.2; /* Added line-height for readability */
+  }
+}
+
+/* Responsive Styles for 430x932 */
+@media (max-width: 430px) and (max-height: 932px) {
+  .about-section {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .about-contentaboveheader h2 {
+    font-size: 1.5rem; /* Smaller font size for header */
+    transform: translateX(0); /* Center the header */
+    margin-top: 15px; /* Adjust spacing */
+  }
+
+  .about-contentaboveheader h2::after {
+    width: 30px; /* Reduce line width */
+    height: 3px; /* Adjust line thickness */
+  }
+
+  .about-content {
+    flex-direction: row; /* Stack image and text vertically */
+    align-items: center; /* Center-align items */
+    max-width: 97%; /* Full width for smaller screens */
+    margin: 10px 0; /* Reduce margins */
+  }
+
+  .character-img {
+    width: 70px; /* Reduce image size */
+    height: 130px;
+    transform: translateX(0); /* Center-align image */
+    margin-bottom: 10px; /* Add spacing below the image */
+  }
+
+  .about-text {
+    transform: translateX(0); /* Center-align text */
+    padding: 15px; /* Adjust padding for text */
+    font-size: 14px; /* Smaller text size */
+  }
+
+  .about-text p {
+    font-size: 14px; /* Smaller font size for paragraph */
+    line-height: 1.5; /* Adjust line spacing */
+  }
+
+  .mission-vision {
+    flex-direction: column; /* Stack left and right columns vertically */
+    padding: 10px 15px; /* Adjust padding */
+    gap: 15px; /* Adjust gap between elements */
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%; /* Full width for both columns */
+  }
+
+  .mission,
+  .vision {
+    height: auto; /* Let height adjust naturally */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .mission h3,
+  .vision h3 {
+    font-size: 16px; /* Adjust header size */
+    padding: 3px 8px; /* Adjust padding */
+  }
+
+  .center-card {
+    padding: 15px; /* Adjust padding */
+    height: auto; /* Let height adjust naturally */
+  }
+
+  .center-card img {
+    width: 100%; /* Full width for image */
+    transform: translateY(0); /* Center-align image */
+    margin: 10px 0; /* Adjust spacing */
+  }
+
+  .center-card button {
+    transform: translateY(0); /* Reset button position */
+    padding: 8px 15px; /* Adjust button size */
+    font-size: 12px; /* Smaller button text */
+  }
 }

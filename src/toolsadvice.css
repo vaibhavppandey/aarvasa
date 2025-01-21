@@ -45,7 +45,7 @@
     text-align: left; /* Align text to the left */
     text-decoration: none; /* Remove any text underline */
     border: none; /* Remove any extra border */
-    transform: translateX(-35px);
+    transform: translateX(+15px);
   }
   
 .tools-advice-wrapper h2::after {

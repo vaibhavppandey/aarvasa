@@ -337,11 +337,11 @@ return (
 </div>
 
       {/* Our Team */}
-      <div class="our-team">
+      <div class="appour-team">
       <h2>Our Team</h2>
-      <div class="team-members">
-          <div class="team-member">
-              <div class="image-container">
+      <div class="appteam-members">
+          <div class="appteam-member">
+              <div class="appimage-container">
                   <img src="/uday.jpg" alt="Team Member Image" />
                   <div class="social-media-container">
                   <a href="https://www.linkedin.com/in/udayprakashsahu/" target="_blank" class="social-icon">
@@ -355,13 +355,13 @@ return (
                   </a>
           </div>
               </div>
-              <div class="info-container">
-                  <p class="name">Uday Prakash Sahu</p>
-                  <p class="designation">Founder & CEO</p>
+              <div class="appinfo-container">
+                  <p class="appname">Uday Prakash Sahu</p>
+                  <p class="appdesignation">Founder & CEO</p>
               </div>
           </div>
-          <div class="team-member">
-              <div class="image-container">
+          <div class="appteam-member">
+              <div class="appimage-container">
                   <img src="/ansh2.jpg" alt="Team Member Image" />
                   <div class="social-media-container">
                   <a href="https://www.linkedin.com/in/ansh-dubey-526325273/" target="_blank" class="social-icon">
@@ -375,13 +375,13 @@ return (
                   </a>
           </div>
               </div>
-              <div class="info-container">
-                  <p class="name">Ansh Dubey</p>
-                  <p class="designation">Co-Founder & COO</p>
+              <div class="appinfo-container">
+                  <p class="appname">Ansh Dubey</p>
+                  <p class="appdesignation">Co-Founder & COO</p>
               </div>
           </div>
-          <div class="team-member">
-              <div class="image-container">
+          <div class="appteam-member">
+              <div class="appimage-container">
                   <img src="/lakshay.png" alt="Team Member Image" />
                   <div class="social-media-container">
                   <a href="https://www.linkedin.com/in/lakshya-phoolwani-44b807277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon">
@@ -395,13 +395,13 @@ return (
                   </a>
           </div>
               </div>
-              <div class="info-container">
-                  <p class="name">Lakshya Phoolwani</p>
-                  <p class="designation">Chief Financial Officer (CFO)</p>
+              <div class="appinfo-container">
+                  <p class="appname">Lakshya Phoolwani</p>
+                  <p class="appdesignation">Chief Financial Officer (CFO)</p>
               </div>
           </div>
-          <div class="team-member">
-              <div class="image-container">
+          <div class="appteam-member">
+              <div class="appimage-container">
                   <img src="/archit.jpg" alt="Team Member Image" />
                   <div class="social-media-container">
                   <a href="https://www.linkedin.com/in/archit-agarwal03/" target="_blank" class="social-icon">
@@ -415,13 +415,13 @@ return (
                   </a>
           </div>
               </div>
-              <div class="info-container">
-                  <p class="name">Archit Agrawal</p>
-                  <p class="designation">Chief Marketing Officer (CMO)</p>
+              <div class="appinfo-container">
+                  <p class="appname">Archit Agrawal</p>
+                  <p class="appdesignation">Chief Marketing Officer (CMO)</p>
               </div>
           </div>
-          <div class="team-member">
-              <div class="image-container">
+          <div class="appteam-member">
+              <div class="appimage-container">
                   <img src="/anirudh.jpg" alt="Team Member Image" />
                   <div class="social-media-container">
                   <a href="https://www.linkedin.com/in/anirudh-saxena-481ba2245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon">
@@ -435,9 +435,9 @@ return (
                   </a>
           </div>
               </div>
-              <div class="info-container">
-                  <p class="name">Anirudh Saxena</p>
-                  <p class="designation">Chief Technology Officer (CTO)</p>
+              <div class="appinfo-container">
+                  <p class="appname">Anirudh Saxena</p>
+                  <p class="appdesignation">Chief Technology Officer (CTO)</p>
               </div>
           </div>
           </div>

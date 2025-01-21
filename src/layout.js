@@ -2,10 +2,15 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./navbar";
 
-const Layout = () => {
+const Layout = ({v,log}) => {
+
+    console.log(v);
+    console.log(log);
+
+    
     return (
         <div>
-            <Navbar />
+            <Navbar i={v} k={log} />
             <Outlet />
         </div>
     );
