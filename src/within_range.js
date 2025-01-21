@@ -190,27 +190,7 @@ function W() {
         required
       ></textarea>
 
-      {/* Price Range Inputs */}
-      <label htmlFor="price-min">Price Range</label>
-      <div className="price-range">
-        <input
-          type="text"
-          id="price-min"
-          name="min"
-          value={min}
-          onChange={(e) => set_Min(e.target.value)}
-          placeholder="Min Price"
-        />
-        <span> - </span>
-        <input
-          type="text"
-          id="price-max"
-          name="max"
-          value={max}
-          onChange={(e) => set_max(e.target.value)}
-          placeholder="Max Price"
-        />
-      </div>
+      
       <div>
         <p>distance range in meters</p>
         <input
