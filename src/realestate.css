@@ -11,7 +11,7 @@
     text-align: left; /* Align text to the left */
     text-decoration: none; /* Remove any text underline */
     border: none; /* Remove any extra border */
-    transform: translateX(-65px);
+    transform: translateX(+5px);
   }
   
 .real-estate-guide h2::after {

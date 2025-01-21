@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import ServicesCardComp from "./servicescardcomponent";
 import "./services.css";
 import ReverseServices from "./ReverseServices";
@@ -91,13 +91,13 @@ const Services = () => {
         <h6 class="serbuttoncontent">BOOK A DEMO</h6>
       </button>
     </div>
-    <h4 class="serWhatclients">Contact Us:</h4>
-    <section className="serconsultation">
-  <div className="sercontent">
-    <div className="serimage">
+    <h4 class="serviceserWhatclients">Contact Us:</h4>
+    <section className="serviceserconsultation">
+  <div className="servicesercontent">
+    <div className="serviceserimage">
       <img src="/Services/scheduleconsulatance.png" alt="House Image" />
     </div>
-    <div className="serform-container">
+    <div className="serviceserform-container">
       <form>
         <label htmlFor="name">NAME</label>
         <input type="text" id="name" placeholder="Enter your name" required />

@@ -1,4 +1,5 @@
   .serconsultation {
+    transform: translateY(-5%);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,6 +41,17 @@
     width: 90%;
     height: 40%;
     align-items: left;
+  }
+
+  .serWhatclients{
+    font-family: "poppins";
+    font-weight: 500;
+    font-size:xx-large;
+    text-decoration:underline;
+    text-decoration-color:#6C1E3C;
+    margin-top: 5%;
+    padding-left: 7%;
+    text-decoration-thickness: 4px ;
   }
   
   form {

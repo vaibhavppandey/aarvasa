@@ -1,5 +1,6 @@
 import React from "react";
 import "./login.css";
+<<<<<<< HEAD
 import { GoogleLogin } from '@react-oauth/google';
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
@@ -20,6 +21,9 @@ const Login = ({ updateParentState }) => {
 const errorMessage = (error) => {
     console.log(error);
 };
+=======
+import { Link } from "react-router-dom";
+>>>>>>> 11dd4b0fbd103357945fcc35fef97c717fa8ff7a
 
   return (
     <div className="containerl">
@@ -40,8 +44,12 @@ const errorMessage = (error) => {
             <button type="submit" className="submit-btn">Log In</button>
           </form>
           <p>
+<<<<<<< HEAD
           <Link to="/signup">signup</Link>
           
+=======
+            New account: <Link to="/signup">Sign up</Link>
+>>>>>>> 11dd4b0fbd103357945fcc35fef97c717fa8ff7a
           </p>
         </div>
         <strong className="view-policy1">By signing up for Aarvasa, you agree to the Terms of Service.<br></br></strong>

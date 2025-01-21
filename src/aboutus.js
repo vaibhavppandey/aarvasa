@@ -23,62 +23,89 @@ const AboutUs = () => {
 
     return (
         <div className="about-section">
-            <h1>Who We Are :</h1>
-            <div className="about-content">
-                <img src="_0001.png" alt="Character" className="character-img" />
-                <p>
-                    <strong>So We Are Aarvasa</strong>, we are more than just real estate professionals — we are your 
-                    partners in creating a better future. With a passion for helping individuals and families find 
-                    their dream homes, we combine expertise, integrity, and innovation to deliver exceptional results. 
-                    Our team consists of seasoned professionals with deep roots in the community and a comprehensive 
-                    understanding of the real estate market. Whether you're buying your first home, upgrading to a 
-                    larger space, or investing in properties, we are dedicated to guiding you every step of the way.
-                </p>
+            <div className="about-contentaboveheader">
+            <h2>Who We Are :</h2>
             </div>
-            <h2>"Connecting People with Perfect Properties and Smart Investments"</h2>
+            <div class="about-content">
+        <img src="_0001.png" alt="Character" class="character-img" />
+        <div class="about-text">
+            <p>
+                <strong>So We Are Aarvasa</strong>, we are more than just real estate professionals — we are your 
+                partners in creating a better future. With a passion for helping individuals and families find 
+                their dream homes, we combine expertise, integrity, and innovation to deliver exceptional results. 
+                Our team consists of seasoned professionals with deep roots in the community and a comprehensive 
+                understanding of the real estate market. Whether you're buying your first home, upgrading to a 
+                larger space, or investing in properties, we are dedicated to guiding you every step of the way.
+            </p>
+        </div>
+        </div>
+            <div className="mission-hea">
+                <h2>Connecting People with Perfect Properties and Smart Investments</h2>
+            </div>
+            
             <div className="mission-vision">
-                <div className="card">
-                    <h3>Our Mission</h3>
-                    <p>
-                        "To democratize real estate investments by offering innovative solutions like flexible payment 
-                        plans, AR/VR property tours, and eco-conscious property insights, while providing a seamless 
-                        experience for buyers, sellers, and renters to maximize their returns and achieve financial 
-                        independence."
-                    </p>
-                </div>
-                <div className="card">
-                    <h3>Aarvasa</h3>
-                    <p>Simplifies Real Estate with Seamless Transactions, Investments, and Property Monetization</p>
-                    <button onClick={() => alert("Thank you for your interest! Please email us at contact@aarvasa.com or call us at +1 234 567 890.")}>
-                        Contact Us
-                    </button>
-                </div>
-                <div className="card">
-                    <h3>Our Vision</h3>
-                    <p>
-                        "To revolutionize real estate accessibility by creating a one-stop platform that empowers 
-                        individuals to invest, lease, and manage properties effortlessly while fostering financial 
-                        growth and sustainability."
-                    </p>
-                </div>
-            </div>
+    <div className="left-column">
+        <div className="card mission">
+            <h3>Our Mission</h3>
+            <p>
+                "To democratize real estate investments by offering innovative solutions like flexible payment 
+                plans, AR/VR property tours, and eco-conscious property insights, while providing a seamless 
+                experience for buyers, sellers, and renters to maximize their returns and achieve financial 
+                independence."
+            </p>
+        </div>
+        <div className="card vision">
+            <h3>Our Vision</h3>
+            <p>
+                "To revolutionize real estate accessibility by creating a one-stop platform that empowers 
+                individuals to invest, lease, and manage properties effortlessly while fostering financial 
+                growth and sustainability."
+            </p>
+        </div>
+    </div>
+    <div className="right-column">
+        <div className="card center-card">
+            <p><strong>Aarvasa</strong> Simplifies Real Estate with Seamless Transactions, Investments, and Property Monetization</p>
+            <img src="houseas.png" alt="Building" className="center-img" />
+            <button>Contact Us</button>
+        </div>
+    </div>
+</div>
+
 
             {/* Milestones Section */}
+            <div className="milestones-header">
+                <h3>Milestones and Future Plans:</h3>
+            </div>
             <section className="milestones">
-                <h2>Milestones and Future Plans:</h2>
-                <div className="timeline">
-                    {milestones.map((milestone, index) => (
-                        <div key={index} className="timeline-item">
-                            <div className="timeline-month">{milestone.month}</div>
-                            <div className="timeline-description">{milestone.description}</div>
-                        </div>
-                    ))}
-                </div>
-            </section>
+      <div className="timeline">
+        {milestones.map((milestone, index) => (
+          <React.Fragment key={index}>
+            <div className="timeline-item">
+              <div className="timeline-star">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M12 .587l3.668 7.425L24 9.748l-6 5.853 1.417 8.257L12 19.771l-7.417 4.087L6 15.601 0 9.748l8.332-1.736z" />
+                </svg>
+              </div>
+              <div className="timeline-month">{milestone.month}</div>
+              <div className="timeline-description">{milestone.description}</div>
+            </div>
+            {index < milestones.length - 1 && (
+              <div className="timeline-connector">
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+              </div>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+    </section>
 
             {/* Our Team */}
       <div class="our-team">
-      <h2>Our Team</h2>
+      <h2>Meet Our Team</h2>
       <div class="team-members">
           <div class="team-member">
               <div class="image-container">
@@ -183,25 +210,48 @@ const AboutUs = () => {
           </div>
         </div>
             
-            
-                <h4 class="serWhatclients">What Our Clients Say</h4>
+    <div class="asserWhatclients">
+    <h2>What Our Clients Say</h2>
+    </div>        
      <div class="serreviewcards">
      <ReviewCard/>
      <ReviewCard/>
      <ReviewCard/>
      </div>
 
+    <div classname ="mapsabove-header">
+        <h1>Geographic Reach :</h1>
+     </div>
+     <div className="aboutusmap-section">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14009.091847020048!2d77.2090219242628!3d28.613939844524303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2c50c2f2c59%3A0x116a9a0dd23cd4e0!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1603104563980!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style={{
+            border: "none",
+            filter: "invert(85%)",
+            borderRadius: "15px",
+            }}
+            allowFullScreen=""
+            loading="lazy"
+            title="Google Map - New Delhi"
+        ></iframe>
+        </div>
+
      <div classname ="division">
       <CompanyPartners partners={partners} />
     </div>
 
-     <h4 class="serWhatclients">Contact Us:</h4>
-    <section className="serconsultation">
-                <div className="sercontent">
-                    <div className="serimage">
+    <div>
+        <h3 classname = "formhead-container">Contact Us:</h3>
+    </div>
+    <div>
+    <section className="aboutusserconsultation">
+                <div className="aboutussercontent">
+                    <div className="aboutusserimage">
                     <img src="/Services/scheduleconsulatance.png" alt="House Image" />
                     </div>
-                    <div className="serform-container">
+                    <div className="aboutusserform-container">
                     <form>
                         <label htmlFor="name">NAME</label>
                         <input type="text" id="name" placeholder="Enter your name" required />
@@ -213,11 +263,13 @@ const AboutUs = () => {
                         <input type="date" id="date" required />
                         
                         <button type="submit">Scheduling A Consultation</button>
-                    </form>
-                    </div>
-                </div>
-                </section>
-                {/*Footer*/}
+                </form>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    {/*Footer*/}
       <footer className="footerapp">
         <div className="footerapp-section">
             <div className="logon">
